@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Investment Schemes - Shivanjali Jewellers | Suvarna Sanchay & Bhishi
+      Yojana
+    </title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --accent-gold: #d4af37;
+        --deep-gold: #b8860b;
+        --luxury-black: #1a1a1a;
+        --soft-cream: #fdf7f0;
+      }
+
+      .font-luxury {
+        font-family: "Playfair Display", serif;
+      }
+      .font-modern {
+        font-family: "Inter", sans-serif;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(
+          135deg,
+          #fdf7f0 0%,
+          #f8f4e6 50%,
+          #fdf7f0 100%
+        );
+      }
+
+      /* Enhanced glassmorphism */
+      .glass {
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .glass-dark {
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .gold-gradient {
+        background: linear-gradient(
+          135deg,
+          #d4af37 0%,
+          #ffd700 25%,
+          #b8860b 50%,
+          #daa520 75%,
+          #d4af37 100%
+        );
+      }
+
+      .luxury-gradient {
+        background: linear-gradient(
+          135deg,
+          #1a1a1a 0%,
+          #2d2d2d 25%,
+          #1a1a1a 50%,
+          #0f0f0f 75%,
+          #000 100%
+        );
+      }
+
+      /* Button styles */
+      .btn-luxury {
+        background: linear-gradient(135deg, #d4af37, #ffd700);
+        box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+        transition: all 0.3s ease;
+      }
+
+      .btn-luxury:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4);
+        background: linear-gradient(135deg, #ffd700, #d4af37);
+      }
+
+      /* Language toggle */
+      .lang-toggle {
+        transition: all 0.3s ease;
+      }
+
+      .lang-toggle.active {
+        background: #d4af37;
+        color: white;
+      }
+
+      /* Animations */
+      .fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .coin-animation {
+        animation: coinFloat 4s ease-in-out infinite;
+      }
+
+      @keyframes coinFloat {
+        0%,
+        100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        25% {
+          transform: translateY(-10px) rotate(5deg);
+        }
+        50% {
+          transform: translateY(-15px) rotate(0deg);
+        }
+        75% {
+          transform: translateY(-5px) rotate(-5deg);
+        }
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #d4af37, #b8860b);
+        border-radius: 4px;
+      }
+
+      /* Text effects */
+      .text-glow {
+        text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+      }
+
+      .scheme-card {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .scheme-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 25px 50px rgba(212, 175, 55, 0.2);
+      }
+    </style>
+  </head>
+
+  <body class="text-gray-900">
+    <!-- Enhanced Navigation -->
+    <header class="fixed w-full z-50 glass-dark backdrop-blur-lg">
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <a href="#" class="flex items-center gap-3 group">
+          <div
+            class="w-12 h-12 rounded-full gold-gradient flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300"
+          >
+            SJ
+          </div>
+          <div class="hidden sm:block">
+            <div class="text-lg font-bold text-white font-luxury">
+              शिवांजली ज्वेलर्स
+            </div>
+            <div class="text-xs text-yellow-300 font-medium tracking-wider">
+              अमूल्य दागिने १९८९ पासून
+            </div>
+          </div>
+        </a>
+
+        <nav
+          class="hidden md:flex gap-8 items-center text-sm font-medium text-white"
+        >
+          <a
+            class="hover:text-yellow-300 transition-colors duration-300 relative group"
+            href="index.html"
+          >
+            Home
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-300 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            class="hover:text-yellow-300 transition-colors duration-300 relative group"
+            href="#designs"
+          >
+            Collections
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-300 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            class="hover:text-yellow-300 transition-colors duration-300 relative group"
+            href="#gallery"
+          >
+            Gallery
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-300 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            class="hover:text-yellow-300 transition-colors duration-300 relative group"
+            href="#contact"
+          >
+            Contact
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-300 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+        </nav>
+
+        <div class="hidden md:flex gap-3">
+          <button
+            class="btn-luxury px-6 py-2.5 rounded-full text-black text-sm font-semibold"
+          >
+            <i class="fas fa-coins mr-2"></i
+            ><a href="Scheme-1.html">Suvarna Sanchay</a>
+          </button>
+          <button
+            class="px-6 py-2.5 rounded-full border-2 border-amber-400 text-amber-300 text-sm font-semibold hover:bg-amber-400 hover:text-black transition-all duration-300"
+          >
+            <i class="fas fa-gem mr-2"></i>Suvarna Bhishi
+          </button>
+        </div>
+
+        <div class="md:hidden">
+          <button id="mobileBtn" class="p-2 rounded-md glass text-white">
+            <i class="fas fa-bars text-lg"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 gold-gradient relative overflow-hidden">
+      <div class="absolute inset-0">
+        <div
+          class="absolute top-20 left-20 w-32 h-32 bg-white/10 rounded-full blur-3xl animate-pulse"
+        ></div>
+        <div
+          class="absolute bottom-10 right-16 w-24 h-24 bg-white/10 rounded-full blur-2xl animate-pulse"
+        ></div>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-6 text-center">
+        <h1
+          class="text-5xl md:text-7xl font-luxury font-bold text-white text-glow mb-4"
+        >
+          Suvarna Bhishi Yojana
+        </h1>
+        <div class="w-24 h-1 bg-white/50 mx-auto mb-8 rounded-full"></div>
+        <p
+          class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed"
+        >
+          स्वर्ण भिशी योजना - Secure your golden future with systematic savings
+        </p>
+      </div>
+
+      <!-- Floating gold coin -->
+      <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+        <div
+          class="coin-animation w-16 h-16 gold-gradient rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-2xl"
+        >
+          ₹
+        </div>
+      </div>
+    </section>
+
+    <!-- Language Toggle -->
+    <section class="py-6 bg-white/80 backdrop-blur-sm">
+      <div class="max-w-7xl mx-auto px-6 flex justify-center">
+        <div class="flex bg-gray-100 rounded-full p-1">
+          <button
+            id="englishBtn"
+            class="lang-toggle active px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300"
+          >
+            English
+          </button>
+          <button
+            id="marathiBtn"
+            class="lang-toggle px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300"
+          >
+            मराठी
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+          <!-- Content Area -->
+          <div class="lg:col-span-2">
+            <div id="englishContent" class="content-section">
+              <div class="bg-white rounded-3xl shadow-xl p-8 mb-8 fade-in">
+                <div class="flex items-center gap-4 mb-6">
+                  <div
+                    class="w-12 h-12 gold-gradient rounded-full flex items-center justify-center"
+                  >
+                    <i class="fas fa-info-circle text-white text-xl"></i>
+                  </div>
+                  <h2 class="text-2xl font-luxury font-bold text-gray-800">
+                    About the Scheme
+                  </h2>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                  According to Indian culture, gold ornamentation is an
+                  important element to reveal the beauty of communication.
+                  Ornaments are traditionally an integral part of a womans life.
+                  The tradition of handing over these ornaments on a large scale
+                  from an ad continues to this day. Weddings and other annual
+                  events make buying jewelery a necessity. Deciding to regulate
+                  all such members rather than buying jewelery in one go.
+                  Remember this we are expressing our feelings Shivanjali
+                  Suvarna Bhishi Yojana.
+                </p>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                  You can buy more than our savings amount by depositing a
+                  certain amount into the plan every month. Because at the end
+                  of the scheme we also participate in the scheme willingly. By
+                  giving you special discounts on purchases equal to your
+                  monthly savings amount.
+                </p>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                  With Shivanjali Jewellers belief and continued growth and
+                  series of designs in the field of jewellery, participating in
+                  this scheme will make your jewelery experience enjoyable and
+                  rewarding.
+                </p>
+              </div>
+            </div>
+
+            <div id="marathiContent" class="content-section hidden">
+              <div class="bg-white rounded-3xl shadow-xl p-8 mb-8 fade-in">
+                <div class="flex items-center gap-4 mb-6">
+                  <div
+                    class="w-12 h-12 gold-gradient rounded-full flex items-center justify-center"
+                  >
+                    <i class="fas fa-info-circle text-white text-xl"></i>
+                  </div>
+                  <h2 class="text-2xl font-luxury font-bold text-gray-800">
+                    योजनेविषयी
+                  </h2>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                  भारतीय संस्कृतीनुसार, संवादाचे सौंदर्य प्रकट करण्यासाठी
+                  सोन्याचे दागिने हा एक महत्त्वाचा घटक आहे. दागिने हे
+                  पारंपारिकपणे महिलांच्या जीवनाचा अविभाज्य भाग आहेत. जाहिरातीतून
+                  मोठ्या प्रमाणात हे दागिने देण्याची परंपरा आजही चालू आहे. लग्न
+                  आणि इतर वार्षिक कार्यक्रमांमध्ये दागिने खरेदी करणे आवश्यक
+                  बनते. एकाच वेळी दागिने खरेदी करण्यापेक्षा अशा सर्व सदस्यांचे
+                  नियमन करण्याचा निर्णय घेणे. हे लक्षात ठेवा आम्ही आमच्या भावना
+                  शिवांजली सुवर्णाभिषेकी योजना व्यक्त करत आहोत.
+                </p>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                  दरमहा योजनेत एक निश्चित रक्कम जमा करून तुम्ही आमच्या बचत
+                  रकमेपेक्षा जास्त खरेदी करू शकता. कारण योजनेच्या शेवटी आम्ही
+                  स्वेच्छेने योजनेत सहभागी होतो. तुमच्या मासिक बचत रकमेच्या
+                  बरोबरीने खरेदीवर तुम्हाला विशेष सवलत देऊन.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                  शिवांजली ज्वेलर्सचा विश्वास आणि दागिन्यांच्या क्षेत्रातील सतत
+                  वाढ आणि डिझाइनच्या मालिकेसह, या योजनेत सहभागी झाल्याने तुमचा
+                  दागिन्यांचा अनुभव आनंददायी आणि फायदेशीर होईल.
+                </p>
+              </div>
+            </div>
+            <div class="overflow-x-auto mt-8">
+              <table
+                class="w-full border border-yellow-600 rounded-lg overflow-hidden shadow-lg"
+              >
+                <thead class="bg-yellow-600 text-white text-lg">
+                  <tr>
+                    <th class="py-3 px-4 text-left">Details</th>
+                    <th class="py-3 px-4 text-left">Scheme Type 1 (11+1)</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-yellow-200 bg-white">
+                  <tr class="hover:bg-yellow-50">
+                    <td class="py-3 px-4 text-gray-700 font-medium">
+                      Your monthly contribution
+                    </td>
+                    <td class="py-3 px-4 text-gray-900">Rs. 3,000/-</td>
+                  </tr>
+                  <tr class="hover:bg-yellow-50">
+                    <td class="py-3 px-4 text-gray-700 font-medium">
+                      Total monthly installments
+                    </td>
+                    <td class="py-3 px-4 text-gray-900">11 months</td>
+                  </tr>
+                  <tr class="hover:bg-yellow-50">
+                    <td class="py-3 px-4 text-gray-700 font-medium">
+                      Your total contribution
+                    </td>
+                    <td class="py-3 px-4 text-gray-900">Rs. 33,000/-</td>
+                  </tr>
+                  <tr class="hover:bg-yellow-50">
+                    <td class="py-3 px-4 text-gray-700 font-medium">
+                      Discounts on purchases from us
+                    </td>
+                    <td class="py-3 px-4 text-gray-900">
+                      Rs. 3,000/- discount on Gold & Silver Jewellery only
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-yellow-50">
+                    <td class="py-3 px-4 text-gray-700 font-medium">
+                      The value of your purchase
+                    </td>
+                    <td class="py-3 px-4 text-gray-900">Rs. 36,000/-</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Sidebar with Gold Coins Image and CTA -->
+          <div class="lg:col-span-1">
+            <div class="sticky top-32">
+              <!-- Gold Coins Visual -->
+              <div
+                class="bg-white rounded-3xl shadow-xl p-8 text-center mb-8 fade-in"
+              >
+                <div class="relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1610375461246-83df859d849d?w=400"
+                    alt="Gold Coins Investment"
+                    class="w-full h-64 object-cover rounded-2xl mb-6"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-yellow-600/20 to-transparent rounded-2xl"
+                  ></div>
+                  <div
+                    class="absolute bottom-4 left-4 right-4 glass-dark rounded-lg p-3"
+                  >
+                    <div class="text-white font-bold">
+                      Start Your Golden Journey
+                    </div>
+                    <div class="text-yellow-300 text-sm">
+                      Invest as low as ₹1,000/month
+                    </div>
+                  </div>
+                </div>
+
+                <h3 class="text-xl font-luxury font-bold text-gray-800 mb-4">
+                  Ready to Start Saving?
+                </h3>
+                <p class="text-gray-600 mb-6">
+                  Join thousands of satisfied customers who have secured their
+                  golden future with us.
+                </p>
+
+                <button
+                  class="btn-luxury px-8 py-4 rounded-full text-black font-bold w-full text-lg mb-4"
+                >
+                  <i class="fas fa-rocket mr-2"></i>Start Your Scheme Today
+                </button>
+              </div>
+
+              <!-- Quick Benefits -->
+              <div class="bg-white rounded-3xl shadow-xl p-8 fade-in">
+                <h3
+                  class="text-xl font-luxury font-bold text-gray-800 mb-6 text-center"
+                >
+                  Why Choose Our Scheme?
+                </h3>
+
+                <div class="space-y-4">
+                  <div
+                    class="flex items-center gap-4 p-4 bg-yellow-50 rounded-xl"
+                  >
+                    <div
+                      class="w-10 h-10 bg-yellow-600 rounded-full flex items-center justify-center"
+                    >
+                      <i class="fas fa-percentage text-white"></i>
+                    </div>
+                    <div>
+                      <div class="font-semibold text-gray-800">
+                        12th Month Bonus
+                      </div>
+                      <div class="text-sm text-gray-600">
+                        Extra value on completion
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="flex items-center gap-4 p-4 bg-blue-50 rounded-xl"
+                  >
+                    <div
+                      class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center"
+                    >
+                      <i class="fas fa-coins text-white"></i>
+                    </div>
+                    <div>
+                      <div class="font-semibold text-gray-800">
+                        Flexible Payments
+                      </div>
+                      <div class="text-sm text-gray-600">
+                        Pay as per convenience
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="flex items-center gap-4 p-4 bg-green-50 rounded-xl"
+                  >
+                    <div
+                      class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center"
+                    >
+                      <i class="fas fa-certificate text-white"></i>
+                    </div>
+                    <div>
+                      <div class="font-semibold text-gray-800">
+                        22K Gold Jewelry
+                      </div>
+                      <div class="text-sm text-gray-600">
+                        BIS Hallmarked quality
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="flex items-center gap-4 p-4 bg-purple-50 rounded-xl"
+                  >
+                    <div
+                      class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center"
+                    >
+                      <i class="fas fa-handshake text-white"></i>
+                    </div>
+                    <div>
+                      <div class="font-semibold text-gray-800">
+                        Trusted Legacy
+                      </div>
+                      <div class="text-sm text-gray-600">
+                        35+ years of excellence
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer
+      id="contact"
+      class="luxury-gradient text-gray-200 relative overflow-hidden"
+    >
+      <div class="absolute inset-0">
+        <div class="absolute top-0 left-0 w-full h-1 gold-gradient"></div>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Company Info -->
+          <div class="md:col-span-2">
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-16 h-16 rounded-full gold-gradient flex items-center justify-center text-white font-bold text-xl"
+              >
+                SJ
+              </div>
+              <div>
+                <div class="text-2xl font-luxury font-bold text-white">
+                  Shivanjali Jewellers
+                </div>
+                <div class="text-sm text-yellow-300 font-medium">
+                  PRECIOUS ORNAMENTS SINCE 1989
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              Three generations of trust and craftsmanship. We create jewelry
+              that celebrates life's most precious moments with unmatched
+              quality and timeless design.
+            </p>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-yellow-600 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-yellow-600 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-yellow-600 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg font-semibold text-white mb-4 font-luxury">
+              Quick Links
+            </h4>
+            <ul class="space-y-2 text-gray-300">
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-yellow-300 transition-colors duration-300"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-yellow-300 transition-colors duration-300"
+                  >Collections</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-yellow-300 transition-colors duration-300"
+                  >Investment Schemes</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-yellow-300 transition-colors duration-300"
+                  >Store Locator</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h4 class="text-lg font-semibold text-white mb-4 font-luxury">
+              Visit Us
+            </h4>
+            <div class="space-y-3 text-gray-300 text-sm">
+              <div class="flex items-start gap-2">
+                <i class="fas fa-map-marker-alt text-yellow-400 mt-1"></i>
+                <div>
+                  Azad Chowk, Raviwar Peth<br />Karad, Maharashtra 415110
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fas fa-phone text-yellow-400"></i>
+                <span>+91 91222 19595</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fas fa-envelope text-yellow-400"></i>
+                <span>info@shivanjalijewellers.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+          <p class="text-gray-400 text-sm">
+            © 2025 Shivanjali Jewellers. All Rights Reserved. |
+            <a
+              href="#"
+              class="hover:text-yellow-300 transition-colors duration-300"
+              >Privacy Policy</a
+            >
+            |
+            <a
+              href="#"
+              class="hover:text-yellow-300 transition-colors duration-300"
+              >Terms of Service</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Enhanced JavaScript -->
+    <script>
+      // Language Toggle Functionality
+      const englishBtn = document.getElementById("englishBtn");
+      const marathiBtn = document.getElementById("marathiBtn");
+      const englishContent = document.getElementById("englishContent");
+      const marathiContent = document.getElementById("marathiContent");
+
+      function switchLanguage(lang) {
+        if (lang === "english") {
+          englishBtn.classList.add("active");
+          marathiBtn.classList.remove("active");
+          englishContent.classList.remove("hidden");
+          marathiContent.classList.add("hidden");
+        } else {
+          marathiBtn.classList.add("active");
+          englishBtn.classList.remove("active");
+          marathiContent.classList.remove("hidden");
+          englishContent.classList.add("hidden");
+        }
+      }
+
+      englishBtn.addEventListener("click", () => switchLanguage("english"));
+      marathiBtn.addEventListener("click", () => switchLanguage("marathi"));
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Intersection Observer for fade-in animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      // Apply fade-in animation to elements
+      document.querySelectorAll(".fade-in").forEach((el, index) => {
+        el.style.opacity = "0";
+        el.style.transform = "translateY(30px)";
+        el.style.transition = `all 0.6s ease-out ${index * 0.1}s`;
+        observer.observe(el);
+      });
+
+      // Enhanced button interactions
+      document.querySelectorAll(".btn-luxury").forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+          // Create ripple effect
+          const ripple = document.createElement("span");
+          const rect = this.getBoundingClientRect();
+          const size = Math.max(rect.width, rect.height);
+          const x = e.clientX - rect.left - size / 2;
+          const y = e.clientY - rect.top - size / 2;
+
+          ripple.style.width = ripple.style.height = size + "px";
+          ripple.style.left = x + "px";
+          ripple.style.top = y + "px";
+          ripple.classList.add(
+            "absolute",
+            "bg-white/30",
+            "rounded-full",
+            "pointer-events-none"
+          );
+          ripple.style.animation = "ripple 0.6s ease-out";
+
+          this.style.position = "relative";
+          this.appendChild(ripple);
+
+          setTimeout(() => ripple.remove(), 600);
+
+          // Add action feedback
+          if (this.textContent.includes("Start Your Scheme")) {
+            alert(
+              "Thank you for your interest! Our team will contact you shortly to help you start your Suvarna Sanchay Yojana."
+            );
+          } else if (this.textContent.includes("Call Now")) {
+            window.location.href = "tel:+919122219595";
+          }
+        });
+      });
+
+      // WhatsApp button functionality
+      document.querySelectorAll("button").forEach((btn) => {
+        if (btn.textContent.includes("WhatsApp")) {
+          btn.addEventListener("click", () => {
+            const message = encodeURIComponent(
+              "Hello! I am interested in the Suvarna Sanchay Yojana. Please provide more details."
+            );
+            window.open(`https://wa.me/919876543210?text=${message}`, "_blank");
+          });
+        }
+      });
+
+      // Add loading animation
+      window.addEventListener("load", () => {
+        document.body.style.opacity = "1";
+        document.body.style.transform = "translateY(0)";
+      });
+
+      // Parallax effect for decorative elements
+      window.addEventListener("scroll", () => {
+        const scrolled = window.pageYOffset;
+        const coins = document.querySelector(".coin-animation");
+        if (coins) {
+          coins.style.transform = `translateY(${scrolled * 0.1}px) rotate(${
+            scrolled * 0.1
+          }deg)`;
+        }
+      });
+
+      // Add custom styles for animations
+      const style = document.createElement("style");
+      style.textContent = `
+        @keyframes ripple {
+          0% { transform: scale(0); opacity: 1; }
+          100% { transform: scale(1); opacity: 0; }
+        }
+        
+        body {
+          opacity: 0;
+          transform: translateY(20px);
+          transition: all 0.8s ease-out;
+        }
+        
+        .scheme-card {
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .scheme-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+        }
+      `;
+      document.head.appendChild(style);
+
+      // Add number counting animation for statistics
+      function animateCounter(element, target) {
+        let current = 0;
+        const increment = target / 100;
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            element.textContent = target;
+            clearInterval(timer);
+          } else {
+            element.textContent = Math.floor(current);
+          }
+        }, 20);
+      }
+
+      // Initialize counter animations when elements come into view
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (
+            entry.isIntersecting &&
+            !entry.target.classList.contains("counted")
+          ) {
+            const target = parseInt(entry.target.dataset.count);
+            animateCounter(entry.target, target);
+            entry.target.classList.add("counted");
+          }
+        });
+      });
+
+      // Enhanced mobile responsiveness
+      function handleResize() {
+        const isMobile = window.innerWidth < 768;
+        const heroTitle = document.querySelector("h1");
+        if (heroTitle) {
+          if (isMobile) {
+            heroTitle.classList.remove("text-7xl");
+            heroTitle.classList.add("text-4xl");
+          } else {
+            heroTitle.classList.remove("text-4xl");
+            heroTitle.classList.add("text-7xl");
+          }
+        }
+      }
+
+      window.addEventListener("resize", handleResize);
+      handleResize(); // Call on load
+
+      // Add smooth page transitions
+      document.addEventListener("DOMContentLoaded", () => {
+        // Add entrance animation delay for better visual flow
+        const elements = document.querySelectorAll(".fade-in");
+        elements.forEach((el, index) => {
+          setTimeout(() => {
+            el.style.animationDelay = `${index * 0.1}s`;
+          }, 100);
+        });
+      });
+
+      // Enhanced form validation (if contact forms are added)
+      function validateForm(formData) {
+        const errors = [];
+        if (!formData.name || formData.name.length < 2) {
+          errors.push("Name must be at least 2 characters long");
+        }
+        if (!formData.phone || !/^\+?[\d\s-]{10,}$/.test(formData.phone)) {
+          errors.push("Please enter a valid phone number");
+        }
+        return errors;
+      }
+
+      // Add scroll-to-top button
+      const scrollToTopBtn = document.createElement("button");
+      scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+      scrollToTopBtn.className =
+        "fixed bottom-8 right-8 w-12 h-12 bg-yellow-600 text-white rounded-full shadow-lg hover:bg-yellow-700 transition-all duration-300 z-40 opacity-0 pointer-events-none";
+      document.body.appendChild(scrollToTopBtn);
+
+      scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          scrollToTopBtn.style.opacity = "1";
+          scrollToTopBtn.style.pointerEvents = "auto";
+        } else {
+          scrollToTopBtn.style.opacity = "0";
+          scrollToTopBtn.style.pointerEvents = "none";
+        }
+      });
+
+      // Add copy functionality for contact details
+      function copyToClipboard(text, element) {
+        navigator.clipboard.writeText(text).then(() => {
+          const originalText = element.innerHTML;
+          element.innerHTML = '<i class="fas fa-check mr-1"></i>Copied!';
+          element.classList.add("text-green-400");
+          setTimeout(() => {
+            element.innerHTML = originalText;
+            element.classList.remove("text-green-400");
+          }, 2000);
+        });
+      }
+
+      // Add click-to-copy functionality to phone numbers
+      document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const phone = link.textContent.trim();
+          copyToClipboard(phone, link);
+          // Still allow calling after a delay
+          setTimeout(() => {
+            window.location.href = link.href;
+          }, 1000);
+        });
+      });
+    </script>
+  </body>
+</html>
