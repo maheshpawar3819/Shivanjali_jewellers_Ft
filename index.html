@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shivanjali Jewellers - Premium Gold & Diamond Jewelry</title>
+
+    <!-- Tailwind Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Swiper for sliders -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-900 font-modern">
+    <!-- Enhanced Navigation -->
+    <header class="fixed w-full z-50 glass-dark backdrop-blur-lg">
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <a href="#" class="flex items-center gap-3 group">
+          <div
+            class="w-12 h-12 rounded-full gold-gradient flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300"
+          >
+            SJ
+          </div>
+          <div class="hidden sm:block">
+            <div class="text-lg font-bold text-white font-luxury">
+              शिवांजली ज्वेलर्स 
+            </div>
+            <div class="text-xs text-yellow-300 font-medium tracking-wider">
+              अमूल्य दागिने १९८९ पासून
+            </div>
+          </div>
+        </a>
+
+        <nav
+          class="hidden md:flex gap-8 items-center text-sm font-medium text-white"
+        >
+          <a
+            class="hover:text-yellow-300 transition-colors duration-300 relative group"
+            href="#"
+          >
+            Home
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-300 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            class="hover:text-yellow-300 transition-colors duration-300 relative group"
+            href="#designs"
+          >
+            Collections
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-300 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            class="hover:text-yellow-300 transition-colors duration-300 relative group"
+            href="#gallery"
+          >
+            Gallery
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-300 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            class="hover:text-yellow-300 transition-colors duration-300 relative group"
+            href="#contact"
+          >
+            Contact
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-300 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+        </nav>
+
+        <div class="hidden md:flex gap-3">
+          <button
+            class="btn-luxury px-6 py-2.5 rounded-full text-black text-sm font-semibold"
+          >
+            <i class="fas fa-coins mr-2"></i>Suvarna Sanchay
+          </button>
+          <button
+            class="px-6 py-2.5 rounded-full border-2 border-amber-400 text-amber-300 text-sm font-semibold hover:bg-amber-400 hover:text-black transition-all duration-300"
+          >
+            <i class="fas fa-gem mr-2"></i>Suvarna Bhishi
+          </button>
+        </div>
+
+        <div class="md:hidden">
+          <button id="mobileBtn" class="p-2 rounded-md glass text-white">
+            <i class="fas fa-bars text-lg"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Enhanced Hero Section with Slider -->
+    <section class="relative min-h-screen overflow-hidden">
+      <div class="swiper heroSwiper w-full h-screen">
+        <div class="swiper-wrapper">
+          <!-- Hero Slide 1 -->
+          <div class="swiper-slide relative">
+            <div
+              class="absolute inset-0 bg-cover bg-center"
+              style="
+                background-image: url('https://images.pexels.com/photos/29368868/pexels-photo-29368868.jpeg');
+              "
+            ></div>
+            <div class="hero-slide-overlay absolute inset-0"></div>
+            <div class="relative z-10 h-full flex items-center">
+              <div class="max-w-7xl mx-auto px-6 w-full">
+                <div
+                  class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+                >
+                  <div class="text-center lg:text-left">
+                    <h1
+                      class="text-5xl lg:text-7xl font-luxury font-bold text-white text-glow leading-tight"
+                    >
+                      Timeless
+                      <span class="block text-yellow-300">Elegance</span>
+                    </h1>
+                    <p
+                      class="mt-6 text-xl text-gray-200 font-medium leading-relaxed"
+                    >
+                      Discover exquisite handcrafted jewelry that celebrates
+                      life's most precious moments
+                    </p>
+
+                    <div
+                      class="mt-8 flex gap-4 flex-wrap justify-center lg:justify-start"
+                    >
+                      <button
+                        class="btn-luxury px-8 py-4 rounded-full text-black font-semibold text-lg"
+                      >
+                        <i class="fas fa-sparkles mr-2"></i>Explore Collection
+                      </button>
+                      <button
+                        class="px-8 py-4 rounded-full border-2 border-white text-white font-semibold text-lg hover:bg-white hover:text-black transition-all duration-300"
+                      >
+                        <i class="fas fa-play mr-2"></i>Watch Story
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="relative float-animation">
+                    <div class="w-80 h-80 mx-auto relative">
+                      <div
+                        class="absolute inset-0 gold-gradient rounded-full blur-3xl opacity-20 animate-pulse"
+                      ></div>
+                      <img
+                        src="https://images.pexels.com/photos/29368877/pexels-photo-29368877.jpeg"
+                        alt="Luxury Jewelry"
+                        class="relative z-10 w-full h-full object-cover rounded-full shadow-2xl shimmer"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Slide 2 -->
+          <div class="swiper-slide relative">
+            <div
+              class="absolute inset-0 bg-cover bg-center"
+              style="
+                background-image: url('https://images.pexels.com/photos/30795545/pexels-photo-30795545.jpeg');
+              "
+            ></div>
+            <div class="hero-slide-overlay absolute inset-0"></div>
+            <div class="relative z-10 h-full flex items-center">
+              <div class="max-w-7xl mx-auto px-6 text-center">
+                <h1
+                  class="text-5xl lg:text-6xl font-luxury font-bold text-white text-glow"
+                >
+                  Bridal
+                  <span class="block text-yellow-300">Collections</span>
+                </h1>
+                <p class="mt-6 text-xl text-gray-200 max-w-2xl mx-auto">
+                  Make your special day unforgettable with our exclusive bridal
+                  jewelry sets
+                </p>
+                <button
+                  class="mt-8 btn-luxury px-10 py-4 rounded-full text-black font-bold text-lg"
+                >
+                  <i class="fas fa-crown mr-2"></i>Shop Bridal Sets
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Slide 3 -->
+          <div class="swiper-slide relative">
+            <div
+              class="absolute inset-0 bg-cover bg-center"
+              style="
+                background-image: url('https://images.pexels.com/photos/266621/pexels-photo-266621.jpeg');
+              "
+            ></div>
+            <div class="hero-slide-overlay absolute inset-0"></div>
+            <div class="relative z-10 h-full flex items-center">
+              <div class="max-w-7xl mx-auto px-6 text-center">
+                <h1
+                  class="text-5xl lg:text-6xl font-luxury font-bold text-white text-glow"
+                >
+                  Investment
+                  <span class="block text-yellow-300">Schemes</span>
+                </h1>
+                <p class="mt-6 text-xl text-gray-200 max-w-2xl mx-auto">
+                  Secure your future with our gold investment plans - Suvarna
+                  Sanchay & Bhishi Yojana
+                </p>
+                <div class="mt-8 flex gap-4 justify-center flex-wrap">
+                  <button
+                    class="btn-luxury px-8 py-4 rounded-full text-black font-semibold"
+                  >
+                    Suvarna Sanchay
+                  </button>
+                  <button
+                    class="px-8 py-4 rounded-full border-2 border-yellow-300 text-yellow-300 font-semibold hover:bg-yellow-300 hover:text-black transition-all duration-300"
+                  >
+                    Suvarna Bhishi
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Navigation -->
+        <div class="swiper-button-next text-white"></div>
+        <div class="swiper-button-prev text-white"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <!-- Floating elements -->
+      <div
+        class="absolute top-1/4 left-10 text-yellow-300 opacity-30 animate-bounce hidden lg:block"
+      >
+        <i class="fas fa-gem text-4xl"></i>
+      </div>
+      <div
+        class="absolute top-1/3 right-16 text-yellow-300 opacity-30 animate-pulse hidden lg:block"
+      >
+        <i class="fas fa-star text-3xl"></i>
+      </div>
+      <div
+        class="absolute bottom-1/4 left-20 text-yellow-300 opacity-30 float-animation hidden lg:block"
+      >
+        <i class="fas fa-diamond text-2xl"></i>
+      </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="relative -mt-16 z-30">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="glass-dark rounded-2xl p-8 shadow-2xl">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="group">
+              <div
+                class="text-3xl font-bold text-yellow-300 font-luxury group-hover:scale-110 transition-transform duration-300"
+              >
+                35+
+              </div>
+              <div class="text-sm text-gray-300 mt-1">Years Legacy</div>
+            </div>
+            <div class="group">
+              <div
+                class="text-3xl font-bold text-yellow-300 font-luxury group-hover:scale-110 transition-transform duration-300"
+              >
+                10K+
+              </div>
+              <div class="text-sm text-gray-300 mt-1">Happy Customers</div>
+            </div>
+            <div class="group">
+              <div
+                class="text-3xl font-bold text-yellow-300 font-luxury group-hover:scale-110 transition-transform duration-300"
+              >
+                500+
+              </div>
+              <div class="text-sm text-gray-300 mt-1">Unique Designs</div>
+            </div>
+            <div class="group">
+              <div
+                class="text-3xl font-bold text-yellow-300 font-luxury group-hover:scale-110 transition-transform duration-300"
+              >
+                3
+              </div>
+              <div class="text-sm text-gray-300 mt-1">Store Locations</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Product Categories -->
+    <section id="designs" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-luxury font-bold text-gray-800">
+            Our <span class="text-yellow-600">Collections</span>
+          </h2>
+          <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            From traditional to contemporary, each piece tells a story of
+            craftsmanship and elegance
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Enhanced Product Cards -->
+          <div
+            class="product-card bg-white rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS0oS3VGKcsm3V8SzPIKKgCGtSItQfTys4RhdZb24mppD1gmQHs4yajrGJppOsSLULVYoGiSio5kW117WTgu5OzGDPIi52ou58nxtlL04TnVOlR5mYLgXQMy8ARfYm4s9RFEmBYMFoPqQ&usqp=CAc"
+                alt="Luxury Bracelets"
+                class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+              <div
+                class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div class="font-semibold">Premium Collection</div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-luxury font-semibold text-gray-800">
+                Bracelets
+              </h3>
+              <p class="text-gray-600 mt-2 text-sm">Elegant wrist jewelry</p>
+              <div class="mt-4 flex justify-between items-center">
+                <span class="text-yellow-600 font-bold">From ₹15,000</span>
+                <button
+                  class="text-yellow-600 hover:text-yellow-700 font-medium"
+                >
+                  View All <i class="fas fa-arrow-right ml-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="product-card bg-white rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQaCkMEz_eOB4YY_D1aCo28q1kTRlf-Sm0zI5izxgaFHYz1k32Mrq2O1qQW0o1pX7Od7QEqW53qaoASCrkljygcF58vpkdsgVYulIGc1U0GxRVJT54hPSkWbQ"
+                alt="Designer Earrings"
+                class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+              <div
+                class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div class="font-semibold">Trending Styles</div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-luxury font-semibold text-gray-800">
+                Earrings
+              </h3>
+              <p class="text-gray-600 mt-2 text-sm">Contemporary designs</p>
+              <div class="mt-4 flex justify-between items-center">
+                <span class="text-yellow-600 font-bold">From ₹8,500</span>
+                <button
+                  class="text-yellow-600 hover:text-yellow-700 font-medium"
+                >
+                  View All <i class="fas fa-arrow-right ml-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="product-card bg-white rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSXhxAvcwkwA5RFgezUpO5HkA8ZJksGe3Jnl2FACo3u3RU8Ph5xFx9xFkuL44eCoYC6gjrCBCBPbW0u78OritaFplvVryfINLfHN1YtwugPhuQJJQBHl1WM9Pk"
+                alt="Engagement Rings"
+                class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold"
+              >
+                BESTSELLER
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+              <div
+                class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div class="font-semibold">Symbol of Love</div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-luxury font-semibold text-gray-800">
+                Engagement
+              </h3>
+              <p class="text-gray-600 mt-2 text-sm">Perfect proposal rings</p>
+              <div class="mt-4 flex justify-between items-center">
+                <span class="text-yellow-600 font-bold">From ₹45,000</span>
+                <button
+                  class="text-yellow-600 hover:text-yellow-700 font-medium"
+                >
+                  View All <i class="fas fa-arrow-right ml-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="product-card bg-white rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR3jONQoti4kMBOQeBoxui7SWh_8L8fUjRhRQbsxMNiKDb2ZtULC0RjDZ4V1lvQM5pTbl0Bvc7k75fyljs30lN-gjBUuAeoECWdFhNz4U9I"
+                alt="Premium Necklaces"
+                class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+              <div
+                class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div class="font-semibold">Heritage Craft</div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-luxury font-semibold text-gray-800">
+                Necklaces
+              </h3>
+              <p class="text-gray-600 mt-2 text-sm">Statement pieces</p>
+              <div class="mt-4 flex justify-between items-center">
+                <span class="text-yellow-600 font-bold">From ₹25,000</span>
+                <button
+                  class="text-yellow-600 hover:text-yellow-700 font-medium"
+                >
+                  View All <i class="fas fa-arrow-right ml-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Premium Features Banner -->
+    <section class="py-20 luxury-gradient relative overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-yellow-600/10 via-transparent to-yellow-600/10"
+      ></div>
+      <div class="relative max-w-7xl mx-auto px-6 text-center">
+        <div
+          class="inline-flex items-center gap-2 bg-yellow-600/20 px-4 py-2 rounded-full text-yellow-300 text-sm font-medium mb-6"
+        >
+          <i class="fas fa-award"></i>
+          <span>CERTIFIED QUALITY ASSURANCE</span>
+        </div>
+
+        <h3
+          class="text-4xl md:text-5xl font-luxury font-bold text-white text-glow"
+        >
+          Crafted to Perfection
+        </h3>
+        <p class="mt-4 text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          Every piece at Shivanjali Jewellers tells a story of heritage,
+          craftsmanship, and timeless beauty. From traditional designs to
+          contemporary masterpieces.
+        </p>
+
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="glass rounded-2xl p-8 text-center group hover:scale-105 transition-transform duration-300"
+          >
+            <div
+              class="w-16 h-16 mx-auto bg-yellow-600 rounded-full flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300"
+            >
+              <i class="fas fa-certificate text-2xl text-white"></i>
+            </div>
+            <h4 class="text-xl font-semibold text-white mb-2">
+              BIS Hallmarked
+            </h4>
+            <p class="text-gray-300 text-sm">Certified purity guarantee</p>
+          </div>
+
+          <div
+            class="glass rounded-2xl p-8 text-center group hover:scale-105 transition-transform duration-300"
+          >
+            <div
+              class="w-16 h-16 mx-auto bg-yellow-600 rounded-full flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300"
+            >
+              <i class="fas fa-hands-helping text-2xl text-white"></i>
+            </div>
+            <h4 class="text-xl font-semibold text-white mb-2">Handcrafted</h4>
+            <p class="text-gray-300 text-sm">Traditional artistry</p>
+          </div>
+
+          <div
+            class="glass rounded-2xl p-8 text-center group hover:scale-105 transition-transform duration-300"
+          >
+            <div
+              class="w-16 h-16 mx-auto bg-yellow-600 rounded-full flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300"
+            >
+              <i class="fas fa-shield-alt text-2xl text-white"></i>
+            </div>
+            <h4 class="text-xl font-semibold text-white mb-2">
+              Lifetime Service
+            </h4>
+            <p class="text-gray-300 text-sm">Complete after-sales support</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Gallery Section -->
+    <section id="gallery" class="py-20 bg-gradient-to-b from-white to-gray-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-luxury font-bold text-gray-800">
+            Masterpiece <span class="text-yellow-600">Gallery</span>
+          </h2>
+          <p class="mt-4 text-lg text-gray-600">
+            Witness the artistry in every detail
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Main gallery grid -->
+          <div class="lg:col-span-2">
+            <div class="grid grid-cols-2 gap-4 h-96">
+              <div
+                class="row-span-2 relative group overflow-hidden rounded-2xl shadow-xl"
+              >
+                <img
+                  src="https://images.pexels.com/photos/29368877/pexels-photo-29368877.jpeg"
+                  alt="Bridal Jewelry Set"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                ></div>
+                <div
+                  class="absolute bottom-6 left-6 right-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >
+                  <h4 class="text-lg font-bold">Bridal Masterpiece</h4>
+                  <p class="text-sm text-gray-200">Traditional elegance</p>
+                </div>
+              </div>
+
+              <div class="relative group overflow-hidden rounded-2xl shadow-xl">
+                <img
+                  src="https://images.pexels.com/photos/29368868/pexels-photo-29368868.jpeg"
+                  alt="Gold Necklace"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                ></div>
+                <div
+                  class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >
+                  <h4 class="font-bold">Gold Collection</h4>
+                </div>
+              </div>
+
+              <div class="relative group overflow-hidden rounded-2xl shadow-xl">
+                <img
+                  src="https://images.pexels.com/photos/30795545/pexels-photo-30795545.jpeg"
+                  alt="Diamond Ring"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                ></div>
+                <div
+                  class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >
+                  <h4 class="font-bold">Diamond Rings</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Enhanced sidebar slider -->
+          <div class="lg:col-span-1">
+            <div
+              class="swiper gallerySwiper rounded-2xl overflow-hidden shadow-2xl h-96"
+            >
+              <div class="swiper-wrapper">
+                <div class="swiper-slide relative">
+                  <img
+                    src="https://images.pexels.com/photos/266621/pexels-photo-266621.jpeg"
+                    class="w-full h-full object-cover"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                  ></div>
+                  <div class="absolute bottom-6 left-6 right-6 text-white">
+                    <h4 class="text-lg font-bold">Pearl Collection</h4>
+                    <p class="text-sm text-gray-200">Lustrous beauty</p>
+                  </div>
+                </div>
+                <div class="swiper-slide relative">
+                  <img
+                    src="https://images.pexels.com/photos/691046/pexels-photo-691046.jpeg"
+                    class="w-full h-full object-cover"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                  ></div>
+                  <div class="absolute bottom-6 left-6 right-6 text-white">
+                    <h4 class="text-lg font-bold">Heritage Sets</h4>
+                    <p class="text-sm text-gray-200">Royal tradition</p>
+                  </div>
+                </div>
+                <div class="swiper-slide relative">
+                  <img
+                    src="https://images.pexels.com/photos/1458867/pexels-photo-1458867.jpeg"
+                    class="w-full h-full object-cover"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                  ></div>
+                  <div class="absolute bottom-6 left-6 right-6 text-white">
+                    <h4 class="text-lg font-bold">Modern Designs</h4>
+                    <p class="text-sm text-gray-200">Contemporary style</p>
+                  </div>
+                </div>
+                <div class="swiper-slide relative">
+                  <img
+                    src="https://images.pexels.com/photos/1670723/pexels-photo-1670723.jpeg"
+                    class="w-full h-full object-cover"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                  ></div>
+                  <div class="absolute bottom-6 left-6 right-6 text-white">
+                    <h4 class="text-lg font-bold">Antique Jewelry</h4>
+                    <p class="text-sm text-gray-200">Vintage charm</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products Slider -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-luxury font-bold text-gray-800">
+            Featured <span class="text-yellow-600">Collections</span>
+          </h2>
+          <p class="mt-4 text-lg text-gray-600">
+            Handpicked pieces that define luxury
+          </p>
+        </div>
+
+        <div class="swiper featuredSwiper">
+          <div class="swiper-wrapper">
+            <!-- Enhanced product slides -->
+            <div class="swiper-slide p-4">
+              <div
+                class="bg-white rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-500"
+              >
+                <div class="relative overflow-hidden">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQrD9cid4gyuxS1A8YkOpMopC_LN-rKKfBjO_9ROProd3hKrZ1on1TDzzY1eO-_L9_-tFAtDQb9cvWHEnSSd36tzy8Gdi4dQ-1ETmnEvdhAWxY_2d-Y2ghYcg"
+                    class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div
+                    class="absolute top-4 left-4 bg-yellow-600 text-white px-3 py-1 rounded-full text-xs font-bold"
+                  >
+                    <i class="fas fa-star mr-1"></i>PREMIUM
+                  </div>
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
+                  <button
+                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm rounded-full p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:scale-110"
+                  >
+                    <i class="fas fa-eye text-gray-800"></i>
+                  </button>
+                </div>
+                <div class="p-6">
+                  <h4 class="text-xl font-luxury font-bold text-gray-800">
+                    Royal Necklace Set
+                  </h4>
+                  <p class="text-gray-600 mt-2">Handcrafted with 22k gold</p>
+                  <div class="flex justify-between items-center mt-4">
+                    <div>
+                      <span class="text-2xl font-bold text-yellow-600"
+                        >₹1,25,000</span
+                      >
+                      <span class="text-sm text-gray-500 line-through ml-2"
+                        >₹1,40,000</span
+                      >
+                    </div>
+                    <button
+                      class="bg-yellow-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-yellow-700 transition-colors duration-300"
+                    >
+                      <i class="fas fa-shopping-bag mr-2"></i>Inquire
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide p-4">
+              <div
+                class="bg-white rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-500"
+              >
+                <div class="relative overflow-hidden">
+                  <img
+                    src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSCsWhS1R_GCF-6g51gwXIYpC1tt8x6HuH__FcJjQU3OQApFoW_WcmrUJOrAvsf2f55hiqYCzFYBI3NXiHmSNf0A_osy7NkxW1N8asjvNmybMAow6juGs4s8A"
+                    class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div
+                    class="absolute top-4 left-4 bg-pink-600 text-white px-3 py-1 rounded-full text-xs font-bold"
+                  >
+                    <i class="fas fa-heart mr-1"></i>POPULAR
+                  </div>
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
+                  <button
+                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm rounded-full p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:scale-110"
+                  >
+                    <i class="fas fa-eye text-gray-800"></i>
+                  </button>
+                </div>
+                <div class="p-6">
+                  <h4 class="text-xl font-luxury font-bold text-gray-800">
+                    Pearl Elegance Set
+                  </h4>
+                  <p class="text-gray-600 mt-2">Natural pearls & gold</p>
+                  <div class="flex justify-between items-center mt-4">
+                    <div>
+                      <span class="text-2xl font-bold text-yellow-600"
+                        >₹85,000</span
+                      >
+                      <span class="text-sm text-gray-500 line-through ml-2"
+                        >₹95,000</span
+                      >
+                    </div>
+                    <button
+                      class="bg-yellow-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-yellow-700 transition-colors duration-300"
+                    >
+                      <i class="fas fa-shopping-bag mr-2"></i>Inquire
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide p-4">
+              <div
+                class="bg-white rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-500"
+              >
+                <div class="relative overflow-hidden">
+                  <img
+                    src="https://jewelemarket.com/cdn/shop/files/bridalcombo31white.jpg?v=1721033781&width=950"
+                    class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div
+                    class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold"
+                  >
+                    <i class="fas fa-fire mr-1"></i>HOT SELLER
+                  </div>
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
+                  <button
+                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm rounded-full p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:scale-110"
+                  >
+                    <i class="fas fa-eye text-gray-800"></i>
+                  </button>
+                </div>
+                <div class="p-6">
+                  <h4 class="text-xl font-luxury font-bold text-gray-800">
+                    Complete Bridal Set
+                  </h4>
+                  <p class="text-gray-600 mt-2">Perfect for your wedding day</p>
+                  <div class="flex justify-between items-center mt-4">
+                    <div>
+                      <span class="text-2xl font-bold text-yellow-600"
+                        >₹2,50,000</span
+                      >
+                      <span class="text-sm text-gray-500 line-through ml-2"
+                        >₹2,80,000</span
+                      >
+                    </div>
+                    <button
+                      class="bg-yellow-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-yellow-700 transition-colors duration-300"
+                    >
+                      <i class="fas fa-shopping-bag mr-2"></i>Inquire
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add more slides for variety -->
+            <div class="swiper-slide p-4">
+              <div
+                class="bg-white rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-500"
+              >
+                <div class="relative overflow-hidden">
+                  <img
+                    src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS0oS3VGKcsm3V8SzPIKKgCGtSItQfTys4RhdZb24mppD1gmQHs4yajrGJppOsSLULVYoGiSio5kW117WTgu5OzGDPIi52ou58nxtlL04TnVOlR5mYLgXQMy8ARfYm4s9RFEmBYMFoPqQ&usqp=CAc"
+                    class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div
+                    class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold"
+                  >
+                    <i class="fas fa-gem mr-1"></i>LUXURY
+                  </div>
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
+                  <button
+                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm rounded-full p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:scale-110"
+                  >
+                    <i class="fas fa-eye text-gray-800"></i>
+                  </button>
+                </div>
+                <div class="p-6">
+                  <h4 class="text-xl font-luxury font-bold text-gray-800">
+                    Diamond Bracelet
+                  </h4>
+                  <p class="text-gray-600 mt-2">Sparkling diamonds & gold</p>
+                  <div class="flex justify-between items-center mt-4">
+                    <div>
+                      <span class="text-2xl font-bold text-yellow-600"
+                        >₹75,000</span
+                      >
+                      <span class="text-sm text-gray-500 line-through ml-2"
+                        >₹85,000</span
+                      >
+                    </div>
+                    <button
+                      class="bg-yellow-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-yellow-700 transition-colors duration-300"
+                    >
+                      <i class="fas fa-shopping-bag mr-2"></i>Inquire
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation buttons -->
+        <div class="flex justify-center mt-8 gap-4">
+          <div
+            class="swiper-button-prev-featured bg-white shadow-lg rounded-full p-3 text-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-300"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </div>
+          <div
+            class="swiper-button-next-featured bg-white shadow-lg rounded-full p-3 text-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-300"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Investment Schemes Section -->
+    <section class="py-20 luxury-gradient relative">
+      <div class="absolute inset-0">
+        <div
+          class="absolute top-10 left-10 w-32 h-32 bg-yellow-600/10 rounded-full blur-3xl animate-pulse"
+        ></div>
+        <div
+          class="absolute bottom-20 right-16 w-24 h-24 bg-yellow-600/10 rounded-full blur-2xl animate-pulse"
+        ></div>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-luxury font-bold text-white text-glow">
+            Investment <span class="text-yellow-300">Schemes</span>
+          </h2>
+          <p class="mt-4 text-xl text-gray-300">Secure your future with gold</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div
+            class="glass rounded-3xl p-8 group hover:scale-105 transition-all duration-500"
+          >
+            <div class="text-center">
+              <div
+                class="w-20 h-20 mx-auto bg-yellow-600 rounded-full flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-500"
+              >
+                <i class="fas fa-piggy-bank text-3xl text-white"></i>
+              </div>
+              <h3 class="text-2xl font-luxury font-bold text-white mb-4">
+                Suvarna Sanchay Yojana
+              </h3>
+              <p class="text-gray-300 mb-6">
+                Save systematically and get assured returns on your gold
+                investment
+              </p>
+              <ul class="text-left text-gray-300 space-y-2 mb-8">
+                <li>
+                  <i class="fas fa-check text-yellow-400 mr-2"></i>Flexible
+                  payment options
+                </li>
+                <li>
+                  <i class="fas fa-check text-yellow-400 mr-2"></i>No making
+                  charges
+                </li>
+                <li>
+                  <i class="fas fa-check text-yellow-400 mr-2"></i>Bonus on
+                  completion
+                </li>
+              </ul>
+              <button
+                class="btn-luxury px-6 py-3 rounded-full text-black font-semibold w-full"
+              >
+                Start Saving Today
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="glass rounded-3xl p-8 group hover:scale-105 transition-all duration-500"
+          >
+            <div class="text-center">
+              <div
+                class="w-20 h-20 mx-auto bg-yellow-600 rounded-full flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-500"
+              >
+                <i class="fas fa-crown text-3xl text-white"></i>
+              </div>
+              <h3 class="text-2xl font-luxury font-bold text-white mb-4">
+                Suvarna Bhishi Yojana
+              </h3>
+              <p class="text-gray-300 mb-6">
+                Premium gold investment plan with exclusive benefits and rewards
+              </p>
+              <ul class="text-left text-gray-300 space-y-2 mb-8">
+                <li>
+                  <i class="fas fa-check text-yellow-400 mr-2"></i>Higher
+                  returns
+                </li>
+                <li>
+                  <i class="fas fa-check text-yellow-400 mr-2"></i>Priority
+                  booking
+                </li>
+                <li>
+                  <i class="fas fa-check text-yellow-400 mr-2"></i>Exclusive
+                  designs
+                </li>
+              </ul>
+              <button
+                class="btn-luxury px-6 py-3 rounded-full text-black font-semibold w-full"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Testimonials -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-luxury font-bold text-gray-800">
+            What Our <span class="text-yellow-600">Customers Say</span>
+          </h2>
+        </div>
+
+        <div class="swiper testimonialSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div
+                class="bg-gray-50 rounded-2xl p-8 text-center max-w-lg mx-auto"
+              >
+                <div class="text-yellow-500 text-2xl mb-4">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </div>
+                <p class="text-gray-700 italic mb-6">
+                  "Exceptional quality and beautiful designs. My bridal set was
+                  absolutely stunning!"
+                </p>
+                <div class="font-semibold text-gray-800">- Priya Sharma</div>
+                <div class="text-sm text-gray-600">Verified Purchase</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="bg-gray-50 rounded-2xl p-8 text-center max-w-lg mx-auto"
+              >
+                <div class="text-yellow-500 text-2xl mb-4">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </div>
+                <p class="text-gray-700 italic mb-6">
+                  "Trusted jeweller for 3 generations. Quality and service is
+                  unmatched!"
+                </p>
+                <div class="font-semibold text-gray-800">- Rajesh Patil</div>
+                <div class="text-sm text-gray-600">Long-time Customer</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="bg-gray-50 rounded-2xl p-8 text-center max-w-lg mx-auto"
+              >
+                <div class="text-yellow-500 text-2xl mb-4">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </div>
+                <p class="text-gray-700 italic mb-6">
+                  "The Suvarna Sanchay scheme helped me buy my dream jewelry
+                  without financial stress."
+                </p>
+                <div class="font-semibold text-gray-800">- Meera Joshi</div>
+                <div class="text-sm text-gray-600">Scheme Subscriber</div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination mt-8"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer
+      id="contact"
+      class="luxury-gradient text-gray-200 relative overflow-hidden"
+    >
+      <div class="absolute inset-0">
+        <div class="absolute top-0 left-0 w-full h-1 gold-gradient"></div>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Company Info -->
+          <div class="md:col-span-2">
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-16 h-16 rounded-full gold-gradient flex items-center justify-center text-white font-bold text-xl"
+              >
+                SJ
+              </div>
+              <div>
+                <div class="text-2xl font-luxury font-bold text-white">
+                  Shivanjali Jewellers
+                </div>
+                <div class="text-sm text-yellow-300 font-medium">
+                  PRECIOUS ORNAMENTS SINCE 1989
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              Three generations of trust and craftsmanship. We create jewelry
+              that celebrates life's most precious moments with unmatched
+              quality and timeless design.
+            </p>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-yellow-600 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-yellow-600 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-yellow-600 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg font-semibold text-white mb-4 font-luxury">
+              Quick Links
+            </h4>
+            <ul class="space-y-2 text-gray-300">
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-yellow-300 transition-colors duration-300"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-yellow-300 transition-colors duration-300"
+                  >Collections</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-yellow-300 transition-colors duration-300"
+                  >Investment Schemes</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-yellow-300 transition-colors duration-300"
+                  >Store Locator</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h4 class="text-lg font-semibold text-white mb-4 font-luxury">
+              Visit Us
+            </h4>
+            <div class="space-y-3 text-gray-300 text-sm">
+              <div class="flex items-start gap-2">
+                <i class="fas fa-map-marker-alt text-yellow-400 mt-1"></i>
+                <div>
+                  Azad Chowk, Raviwar Peth<br />Karad, Maharashtra 415110
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fas fa-phone text-yellow-400"></i>
+                <span>+91 98765 43210</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fas fa-envelope text-yellow-400"></i>
+                <span>info@shivanjalijewellers.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+          <p class="text-gray-400 text-sm">
+            © 2025 Shivanjali Jewellers. All Rights Reserved. |
+            <a
+              href="#"
+              class="hover:text-yellow-300 transition-colors duration-300"
+              >Privacy Policy</a
+            >
+            |
+            <a
+              href="#"
+              class="hover:text-yellow-300 transition-colors duration-300"
+              >Terms of Service</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Enhanced JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
