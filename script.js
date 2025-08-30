@@ -1,6 +1,23 @@
 // Mobile menu toggle
-document.getElementById("mobileBtn").addEventListener("click", () => {
-  alert("Mobile menu: implement as needed");
+const mobileBtn = document.getElementById("mobileBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+const overlay = document.getElementById("overlay");
+
+mobileBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("-translate-x-full");
+  overlay.classList.toggle("hidden");
+  setTimeout(() => overlay.classList.toggle("opacity-0"), 10);
+
+  // Prevent background scroll
+  document.body.classList.toggle("overflow-hidden");
+});
+
+overlay.addEventListener("click", () => {
+  mobileMenu.classList.add("-translate-x-full");
+  overlay.classList.add("opacity-0");
+  setTimeout(() => overlay.classList.add("hidden"), 300);
+
+  document.body.classList.remove("overflow-hidden");
 });
 
 // Hero Slider
