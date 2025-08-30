@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shivanjali Jewellers - Premium Gold & Diamond Jewelry</title>
+
+    <!-- Tailwind Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Swiper for sliders -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .fade-in {
+        animation: fadeInUp 0.8s ease-out;
+      }
+
+      .float {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      .bg-gradient-gold {
+        background: linear-gradient(135deg, #f9f7f4 0%, #f4e4c1 100%);
+      }
+
+      .bg-gradient-gold-dark {
+        background: linear-gradient(135deg, #b8860b 0%, #d4af37 100%);
+      }
+
+      .text-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-900 font-modern">
+    <!-- Enhanced Navigation -->
+    <header class="fixed w-full z-50 glass-dark backdrop-blur-lg">
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div
+            class="w-12 h-12 rounded-full gold-gradient flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300"
+          >
+            SJ
+          </div>
+          <div class="hidden sm:block">
+            <div class="text-lg font-bold text-white font-luxury">
+              शिवांजली ज्वेलर्स
+            </div>
+            <div class="text-xs text-yellow-300 font-medium tracking-wider">
+              अमूल्य दागिने १९८९ पासून
+            </div>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav
+          class="hidden md:flex gap-8 items-center text-sm font-medium text-white"
+        >
+          <a class="hover:text-yellow-300 relative group" href="#"
+            >Home
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-300 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a class="hover:text-yellow-300 relative group" href="#designs"
+            >Collections
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-300 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a class="hover:text-yellow-300 relative group" href="#gallery"
+            >About Us
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-300 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a class="hover:text-yellow-300 relative group" href="#news & events"
+            >News & Events
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-300 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a class="hover:text-yellow-300 relative group" href="#contact"
+            >Contact Us
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-300 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+        </nav>
+
+        <!-- Desktop Buttons -->
+        <div class="hidden md:flex gap-3">
+          <a
+            href="Scheme-1.html"
+            class="btn-luxury px-6 py-2.5 rounded-full text-black text-sm font-semibold"
+          >
+            <i class="fas fa-coins mr-2"></i> Suvarna Sanchay
+          </a>
+          <a
+            href="Scheme-2.html"
+            class="px-6 py-2.5 rounded-full border-2 border-amber-400 text-amber-300 text-sm font-semibold hover:bg-amber-400 hover:text-black transition-all duration-300"
+          >
+            <i class="fas fa-gem mr-2"></i> Suvarna Bhishi
+          </a>
+        </div>
+
+        <!-- Mobile Button -->
+        <div class="md:hidden">
+          <button id="mobileBtn" class="p-2 rounded-md glass text-white">
+            <i class="fas fa-bars text-lg"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Demo button to show menu -->
+    <button
+      id="menuToggle"
+      class="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+    >
+      <i class="fas fa-bars mr-2"></i> Open Menu
+    </button>
+
+    <!-- Overlay (outside header) -->
+    <div
+      id="overlay"
+      class="fixed inset-0 bg-gradient-to-br from-black/80 via-black/70 to-purple-900/30 z-30 hidden opacity-0 transition-all duration-500 glass-effect"
+    ></div>
+
+    <!-- Mobile Menu (outside header) -->
+    <nav
+      id="mobileMenu"
+      class="fixed md:hidden top-0 left-0 w-80 max-w-[85vw] h-full bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white z-40 p-0 flex flex-col transform -translate-x-full transition-all duration-500 shadow-2xl border-r border-yellow-400/20"
+    >
+      <!-- Header Section -->
+      <div
+        class="bg-gradient-to-r from-yellow-400/10 to-yellow-600/10 p-6 border-b border-yellow-400/20"
+      >
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-bold text-yellow-400">
+            <i class="fas fa-gem mr-2"></i>Menu
+          </h2>
+          <button
+            id="closeMenu"
+            class="text-gray-400 hover:text-white transition-colors duration-200 text-xl"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="flex-1 p-6 space-y-4">
+        <a
+          href="#"
+          class="group flex items-center text-lg font-medium text-gray-300 hover:text-yellow-400 transition-all duration-300 p-3 rounded-xl hover:bg-yellow-400/10 hover:translate-x-2"
+        >
+          <i
+            class="fas fa-home mr-4 text-yellow-400 group-hover:scale-110 transition-transform duration-300"
+          ></i>
+          Home
+        </a>
+
+        <a
+          href="#designs"
+          class="group flex items-center text-lg font-medium text-gray-300 hover:text-yellow-400 transition-all duration-300 p-3 rounded-xl hover:bg-yellow-400/10 hover:translate-x-2"
+        >
+          <i
+            class="fas fa-gem mr-4 text-yellow-400 group-hover:scale-110 transition-transform duration-300"
+          ></i>
+          Collections
+        </a>
+
+        <a
+          href="#about"
+          class="group flex items-center text-lg font-medium text-gray-300 hover:text-yellow-400 transition-all duration-300 p-3 rounded-xl hover:bg-yellow-400/10 hover:translate-x-2"
+        >
+          <i
+            class="fas fa-info-circle mr-4 text-yellow-400 group-hover:scale-110 transition-transform duration-300"
+          ></i>
+          About Us
+        </a>
+
+        <a
+          href="#news"
+          class="group flex items-center text-lg font-medium text-gray-300 hover:text-yellow-400 transition-all duration-300 p-3 rounded-xl hover:bg-yellow-400/10 hover:translate-x-2"
+        >
+          <i
+            class="fas fa-newspaper mr-4 text-yellow-400 group-hover:scale-110 transition-transform duration-300"
+          ></i>
+          News & Events
+        </a>
+        <a
+          href="#contact"
+          class="group flex items-center text-lg font-medium text-gray-300 hover:text-yellow-400 transition-all duration-300 p-3 rounded-xl hover:bg-yellow-400/10 hover:translate-x-2"
+        >
+          <i
+            class="fas fa-phone-alt mr-4 text-yellow-400 group-hover:scale-110 transition-transform duration-300"
+          ></i>
+          Contact
+        </a>
+      </div>
+
+      <!-- CTA Buttons Section -->
+      <div class="p-6 border-t border-yellow-400/20 space-y-4">
+        <a
+          href="Scheme-1.html"
+          class="group relative w-full bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-6 py-4 rounded-2xl font-bold text-center hover:from-yellow-300 hover:to-yellow-400 transition-all duration-300 shadow-lg hover:shadow-xl hover-glow transform hover:scale-105 flex items-center justify-center overflow-hidden"
+        >
+          <div
+            class="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"
+          ></div>
+          <i class="fas fa-coins mr-3 text-lg"></i>
+          <span class="relative z-10">Suvarna Sanchay</span>
+        </a>
+
+        <a
+          href="Scheme-2.html"
+          class="group relative w-full border-2 border-yellow-400 bg-transparent text-yellow-300 px-6 py-4 rounded-2xl text-center font-bold hover:bg-yellow-400 hover:text-black transition-all duration-300 shadow-lg hover:shadow-xl hover-glow transform hover:scale-105 flex items-center justify-center overflow-hidden"
+        >
+          <div
+            class="absolute inset-0 bg-yellow-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+          ></div>
+          <i class="fas fa-gem mr-3 text-lg relative z-10"></i>
+          <span class="relative z-10">Suvarna Bhishi</span>
+        </a>
+      </div>
+
+      <!-- Decorative Elements -->
+      <div class="absolute top-20 right-4 text-yellow-400/20 text-6xl">
+        <i class="fas fa-gem"></i>
+      </div>
+      <div class="absolute bottom-32 right-6 text-yellow-400/10 text-4xl">
+        <i class="fas fa-coins"></i>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="bg-gradient-gold py-20 text-center relative overflow-hidden"
+    >
+      <div class="absolute inset-0 opacity-10">
+        <div
+          class="absolute top-20 left-20 w-32 h-32 bg-gold rounded-full float"
+        ></div>
+        <div
+          class="absolute top-40 right-32 w-20 h-20 bg-gold-dark rounded-full float"
+          style="animation-delay: -1s"
+        ></div>
+        <div
+          class="absolute bottom-20 left-1/3 w-24 h-24 bg-gold rounded-full float"
+          style="animation-delay: -2s"
+        ></div>
+      </div>
+
+      <div class="container mx-auto px-6 relative z-10">
+        <h1
+          class="text-5xl md:text-6xl lg:text-7xl font-light text-gold-dark mb-6 text-shadow fade-in"
+        >
+          About <span class="font-semibold text-gold">Shivanjali</span>
+        </h1>
+        <div class="w-24 h-1 bg-gradient-gold-dark mx-auto mb-8"></div>
+        <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          Where tradition meets modernity, and every piece tells a story of
+          unmatched craftsmanship and timeless beauty.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main About Section -->
+    <section class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+          <!-- Founder Image -->
+          <div class="text-center fade-in">
+            <div class="relative inline-block">
+              <img
+                src="https://shivanjalijewellers.com/static/media/UdayPawar.65a1f95ab8283de94fde.png"
+                alt="Uday Uttam Pawar"
+                class="rounded-3xl shadow-2xl border-4 border-gold-light hover:shadow-3xl transition-all duration-500 hover:scale-105"
+              />
+              <div
+                class="absolute -top-4 -right-4 w-8 h-8 bg-gradient-gold-dark rounded-full animate-pulse"
+              ></div>
+            </div>
+            <h3 class="text-2xl font-semibold text-gold-dark mt-6 mb-2">
+              Uday Uttam Pawar
+            </h3>
+            <p class="text-gray-600 italic">Founder & Visionary</p>
+          </div>
+
+          <!-- About Content -->
+          <div class="fade-in">
+            <h2
+              class="text-4xl md:text-5xl font-light text-gold-dark mb-8 leading-tight"
+            >
+              Crafting Timeless
+              <span class="block text-gold font-semibold"
+                >Elegance Since 2003</span
+              >
+            </h2>
+
+            <div class="space-y-6 text-gray-700 text-lg leading-relaxed">
+              <p>
+                Welcome to Shivanjali Jewellers, where tradition meets
+                modernity, and every piece tells a story of unmatched
+                craftsmanship and timeless beauty. Established in 2003 by Uday
+                Uttam Pawar, we have been proudly serving the people of Karad,
+                Maharashtra, with the finest collection of Gold, Silver, and
+                Diamond jewellery.
+              </p>
+
+              <p>
+                Our shop is located at Azad Chowk, Raviwar Peth, a hub of
+                cultural richness, where we continue to build trust with each
+                customer who walks through our doors.
+              </p>
+
+              <p>
+                At Shivanjali Jewellers, we understand the emotional value that
+                jewellery holds. Whether you're celebrating a special occasion,
+                preserving a family tradition, or simply adding elegance to your
+                everyday life, our stunning collections are designed to make
+                every moment unforgettable.
+              </p>
+            </div>
+
+            <div class="mt-8 flex flex-wrap gap-4">
+              <div class="bg-gold-light px-4 py-2 rounded-full">
+                <span class="text-gold-dark font-semibold"
+                  >✨ Gold Jewellery</span
+                >
+              </div>
+              <div class="bg-gold-light px-4 py-2 rounded-full">
+                <span class="text-gold-dark font-semibold"
+                  >💎 Diamond Collection</span
+                >
+              </div>
+              <div class="bg-gold-light px-4 py-2 rounded-full">
+                <span class="text-gold-dark font-semibold"
+                  >🥈 Silver Ornaments</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-gradient-gold-dark py-16 text-white">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div class="fade-in">
+            <div class="text-5xl font-bold mb-3">20+</div>
+            <div class="text-lg opacity-90">Years of Excellence</div>
+          </div>
+          <div class="fade-in" style="animation-delay: 0.2s">
+            <div class="text-5xl font-bold mb-3">5000+</div>
+            <div class="text-lg opacity-90">Happy Customers</div>
+          </div>
+          <div class="fade-in" style="animation-delay: 0.4s">
+            <div class="text-5xl font-bold mb-3">500+</div>
+            <div class="text-lg opacity-90">Unique Designs</div>
+          </div>
+          <div class="fade-in" style="animation-delay: 0.6s">
+            <div class="text-5xl font-bold mb-3">100%</div>
+            <div class="text-lg opacity-90">Authentic Quality</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-20 bg-gradient-gold">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-light text-gold-dark mb-6">
+            Our Core Values
+          </h2>
+          <div class="w-24 h-1 bg-gradient-gold-dark mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:transform hover:-translate-y-2 fade-in"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-gold-dark rounded-full flex items-center justify-center text-white text-2xl mb-6 mx-auto"
+            >
+              🎨
+            </div>
+            <h3 class="text-xl font-semibold text-gold-dark mb-4 text-center">
+              Craftsmanship
+            </h3>
+            <p class="text-gray-600 text-center leading-relaxed">
+              Every piece is meticulously crafted by skilled artisans, ensuring
+              the highest quality and attention to detail in every design.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:transform hover:-translate-y-2 fade-in"
+            style="animation-delay: 0.2s"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-gold-dark rounded-full flex items-center justify-center text-white text-2xl mb-6 mx-auto"
+            >
+              🤝
+            </div>
+            <h3 class="text-xl font-semibold text-gold-dark mb-4 text-center">
+              Trust
+            </h3>
+            <p class="text-gray-600 text-center leading-relaxed">
+              Built on decades of honest relationships, we've earned the trust
+              of families across generations through transparent dealings.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:transform hover:-translate-y-2 fade-in"
+            style="animation-delay: 0.4s"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-gold-dark rounded-full flex items-center justify-center text-white text-2xl mb-6 mx-auto"
+            >
+              💎
+            </div>
+            <h3 class="text-xl font-semibold text-gold-dark mb-4 text-center">
+              Quality
+            </h3>
+            <p class="text-gray-600 text-center leading-relaxed">
+              We source only the finest materials and maintain rigorous quality
+              standards to ensure lasting beauty and value.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Legacy Section -->
+    <section class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl md:text-5xl font-light text-gold-dark mb-8">
+            A Legacy of <span class="text-gold font-semibold">Excellence</span>
+          </h2>
+
+          <div
+            class="bg-white p-10 rounded-3xl shadow-xl relative overflow-hidden"
+          >
+            <div
+              class="absolute top-0 left-0 w-full h-2 bg-gradient-gold-dark"
+            ></div>
+
+            <p class="text-xl text-gray-700 leading-relaxed mb-8">
+              "We specialize in offering the finest gold, silver, and diamond
+              jewellery that reflects both modern trends and traditional values.
+              Each piece in our collection is carefully selected to ensure it
+              meets our high standards of quality and craftsmanship."
+            </p>
+
+            <div class="flex items-center justify-center gap-4">
+              <div
+                class="w-12 h-12 bg-gradient-gold-dark rounded-full flex items-center justify-center"
+              >
+                <span class="text-white font-bold text-lg">SJ</span>
+              </div>
+              <div class="text-left">
+                <div class="font-semibold text-gold-dark">
+                  Shivanjali Jewellers
+                </div>
+                <div class="text-sm text-gray-600">Karad, Maharashtra</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="py-16 bg-gradient-gold">
+      <div class="container mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-light text-gold-dark mb-6">
+            Visit Our Store
+          </h2>
+          <p class="text-lg text-gray-700 mb-8">
+            Located in the heart of Karad's cultural district, our showroom at
+            Azad Chowk, Raviwar Peth offers an immersive experience where you
+            can explore our exquisite collections in person.
+          </p>
+
+          <div class="bg-white p-8 rounded-2xl shadow-lg inline-block">
+            <div class="flex items-center gap-3 text-gold-dark">
+              <span class="text-2xl">📍</span>
+              <div class="text-left">
+                <div class="font-semibold text-lg">
+                  Azad Chowk, Raviwar Peth
+                </div>
+                <div class="text-gray-600">Karad, Maharashtra</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 text-center">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl md:text-5xl font-light text-gold-dark mb-6">
+          Ready to Find Your Perfect Piece?
+        </h2>
+        <p class="text-xl text-gray-700 max-w-2xl mx-auto mb-10">
+          Discover our extensive collection and let us help you find jewellery
+          that tells your unique story.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+          <a
+            href="#collections"
+            class="bg-gradient-gold-dark text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transition-all duration-300 hover:transform hover:-translate-y-1 inline-flex items-center gap-3"
+          >
+            <span>Explore Collections</span>
+            <span>✨</span>
+          </a>
+          <a
+            href="#contact"
+            class="border-2 border-gold-dark text-gold-dark px-8 py-4 rounded-full text-lg font-semibold hover:bg-gold-dark hover:text-white transition-all duration-300 hover:transform hover:-translate-y-1 inline-flex items-center gap-3"
+          >
+            <span>Contact Us</span>
+            <span>📞</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Enhanced Footer -->
+    <footer
+      id="contact"
+      class="luxury-gradient text-gray-200 relative overflow-hidden"
+    >
+      <div class="absolute inset-0">
+        <div class="absolute top-0 left-0 w-full h-1 gold-gradient"></div>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Company Info -->
+          <div class="md:col-span-2">
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-16 h-16 rounded-full gold-gradient flex items-center justify-center text-white font-bold text-xl"
+              >
+                SJ
+              </div>
+              <div>
+                <div class="text-2xl font-luxury font-bold text-white">
+                  Shivanjali Jewellers
+                </div>
+                <div class="text-sm text-yellow-300 font-medium">
+                  PRECIOUS ORNAMENTS SINCE 1989
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              Three generations of trust and craftsmanship. We create jewelry
+              that celebrates life's most precious moments with unmatched
+              quality and timeless design.
+            </p>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-yellow-600 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-yellow-600 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-yellow-600 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg font-semibold text-white mb-4 font-luxury">
+              Quick Links
+            </h4>
+            <ul class="space-y-2 text-gray-300">
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-yellow-300 transition-colors duration-300"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-yellow-300 transition-colors duration-300"
+                  >Collections</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-yellow-300 transition-colors duration-300"
+                  >Investment Schemes</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-yellow-300 transition-colors duration-300"
+                  >Store Locator</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h4 class="text-lg font-semibold text-white mb-4 font-luxury">
+              Visit Us
+            </h4>
+            <div class="space-y-3 text-gray-300 text-sm">
+              <div class="flex items-start gap-2">
+                <i class="fas fa-map-marker-alt text-yellow-400 mt-1"></i>
+                <div>
+                  Azad Chowk, Raviwar Peth<br />Karad, Maharashtra 415110
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fas fa-phone text-yellow-400"></i>
+                <span>+91 91222 19595</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fas fa-envelope text-yellow-400"></i>
+                <span>info@shivanjalijewellers.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+          <p class="text-gray-400 text-sm">
+            © 2025 Shivanjali Jewellers. All Rights Reserved. |
+            <a
+              href="#"
+              class="hover:text-yellow-300 transition-colors duration-300"
+              >Privacy Policy</a
+            >
+            |
+            <a
+              href="#"
+              class="hover:text-yellow-300 transition-colors duration-300"
+              >Terms of Service</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const mobileBtn = document.getElementById("mobileBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const overlay = document.getElementById("overlay");
+
+      mobileBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("-translate-x-full");
+        overlay.classList.toggle("hidden");
+        setTimeout(() => overlay.classList.toggle("opacity-0"), 10);
+
+        // Prevent background scroll
+        document.body.classList.toggle("overflow-hidden");
+      });
+
+      overlay.addEventListener("click", () => {
+        mobileMenu.classList.add("-translate-x-full");
+        overlay.classList.add("opacity-0");
+        setTimeout(() => overlay.classList.add("hidden"), 300);
+
+        document.body.classList.remove("overflow-hidden");
+      });
+
+      // Add scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fade-in");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll("section > div").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Add hover effects to value cards
+      document.querySelectorAll(".hover\\:transform").forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+          card.style.transform = "translateY(-8px) scale(1.02)";
+        });
+
+        card.addEventListener("mouseleave", () => {
+          card.style.transform = "translateY(0) scale(1)";
+        });
+      });
+    </script>
+  </body>
+</html>
