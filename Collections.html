@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shivanjali Jewellers - Premium Gold & Diamond Jewelry</title>
+
+    <!-- Tailwind Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Swiper for sliders -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .tab-active {
+        background: linear-gradient(135deg, #f59e0b, #f97316);
+        color: white;
+        box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+        transform: translateY(-2px);
+      }
+
+      .tab-inactive {
+        background: white;
+        color: #6b7280;
+        border: 2px solid #e5e7eb;
+      }
+
+      .tab-inactive:hover {
+        background: #f9fafb;
+        color: #f59e0b;
+        border-color: #f59e0b;
+      }
+
+      .product-card {
+        background: linear-gradient(145deg, #ffffff, #f8fafc);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        height: 550px;
+      }
+
+      .product-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .image-container {
+        background: linear-gradient(135deg, #fef3c7, #fed7aa);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .image-container::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.3) 0%,
+          transparent 70%
+        );
+        animation: shimmer 3s ease-in-out infinite;
+      }
+
+      @keyframes shimmer {
+        0%,
+        100% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(180deg);
+        }
+      }
+
+      .category-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+        gap: 2rem;
+      }
+
+      @media (max-width: 768px) {
+        .category-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-900 font-modern">
+    <header class="fixed w-full z-50 glass-dark backdrop-blur-lg">
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div
+            class="w-12 h-12 rounded-full gold-gradient flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300"
+          >
+            SJ
+          </div>
+          <div class="hidden sm:block">
+            <div class="text-lg font-bold text-white font-luxury">
+              शिवांजली ज्वेलर्स
+            </div>
+            <div class="text-xs text-yellow-300 font-medium tracking-wider">
+              अमूल्य दागिने १९८९ पासून
+            </div>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav
+          class="hidden md:flex gap-8 items-center text-sm font-medium text-white"
+        >
+          <a class="hover:text-yellow-300 relative group" href="#"
+            >Home
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-300 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a class="hover:text-yellow-300 relative group" href="#designs"
+            >Collections
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-300 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a class="hover:text-yellow-300 relative group" href="#gallery"
+            >About Us
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-300 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a class="hover:text-yellow-300 relative group" href="#news & events"
+            >News & Events
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-300 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a class="hover:text-yellow-300 relative group" href="#contact"
+            >Contact Us
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-300 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+        </nav>
+
+        <!-- Desktop Buttons -->
+        <div class="hidden md:flex gap-3">
+          <a
+            href="Scheme-1.html"
+            class="btn-luxury px-6 py-2.5 rounded-full text-black text-sm font-semibold"
+          >
+            <i class="fas fa-coins mr-2"></i> Suvarna Sanchay
+          </a>
+          <a
+            href="Scheme-2.html"
+            class="px-6 py-2.5 rounded-full border-2 border-amber-400 text-amber-300 text-sm font-semibold hover:bg-amber-400 hover:text-black transition-all duration-300"
+          >
+            <i class="fas fa-gem mr-2"></i> Suvarna Bhishi
+          </a>
+        </div>
+
+        <!-- Mobile Button -->
+        <div class="md:hidden">
+          <button id="mobileBtn" class="p-2 rounded-md glass text-white">
+            <i class="fas fa-bars text-lg"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Overlay (outside header) -->
+    <div
+      id="overlay"
+      class="fixed inset-0 bg-gradient-to-br from-black/80 via-black/70 to-purple-900/30 z-30 hidden opacity-0 transition-all duration-500 glass-effect"
+    ></div>
+
+    <!-- Mobile Menu (outside header) -->
+    <nav
+      id="mobileMenu"
+      class="fixed md:hidden top-0 left-0 w-80 max-w-[85vw] h-full bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white z-40 p-0 flex flex-col transform -translate-x-full transition-all duration-500 shadow-2xl border-r border-yellow-400/20"
+    >
+      <!-- Header Section -->
+      <div
+        class="bg-gradient-to-r from-yellow-400/10 to-yellow-600/10 p-6 border-b border-yellow-400/20"
+      >
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-bold text-yellow-400">
+            <i class="fas fa-gem mr-2"></i>Menu
+          </h2>
+          <button
+            id="closeMenu"
+            class="text-gray-400 hover:text-white transition-colors duration-200 text-xl"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="flex-1 p-6 space-y-4">
+        <a
+          href="#"
+          class="group flex items-center text-lg font-medium text-gray-300 hover:text-yellow-400 transition-all duration-300 p-3 rounded-xl hover:bg-yellow-400/10 hover:translate-x-2"
+        >
+          <i
+            class="fas fa-home mr-4 text-yellow-400 group-hover:scale-110 transition-transform duration-300"
+          ></i>
+          Home
+        </a>
+
+        <a
+          href="#designs"
+          class="group flex items-center text-lg font-medium text-gray-300 hover:text-yellow-400 transition-all duration-300 p-3 rounded-xl hover:bg-yellow-400/10 hover:translate-x-2"
+        >
+          <i
+            class="fas fa-gem mr-4 text-yellow-400 group-hover:scale-110 transition-transform duration-300"
+          ></i>
+          Collections
+        </a>
+
+        <a
+          href="#about"
+          class="group flex items-center text-lg font-medium text-gray-300 hover:text-yellow-400 transition-all duration-300 p-3 rounded-xl hover:bg-yellow-400/10 hover:translate-x-2"
+        >
+          <i
+            class="fas fa-info-circle mr-4 text-yellow-400 group-hover:scale-110 transition-transform duration-300"
+          ></i>
+          About Us
+        </a>
+
+        <a
+          href="#news"
+          class="group flex items-center text-lg font-medium text-gray-300 hover:text-yellow-400 transition-all duration-300 p-3 rounded-xl hover:bg-yellow-400/10 hover:translate-x-2"
+        >
+          <i
+            class="fas fa-newspaper mr-4 text-yellow-400 group-hover:scale-110 transition-transform duration-300"
+          ></i>
+          News & Events
+        </a>
+        <a
+          href="#contact"
+          class="group flex items-center text-lg font-medium text-gray-300 hover:text-yellow-400 transition-all duration-300 p-3 rounded-xl hover:bg-yellow-400/10 hover:translate-x-2"
+        >
+          <i
+            class="fas fa-phone-alt mr-4 text-yellow-400 group-hover:scale-110 transition-transform duration-300"
+          ></i>
+          Contact
+        </a>
+      </div>
+
+      <!-- CTA Buttons Section -->
+      <div class="p-6 border-t border-yellow-400/20 space-y-4">
+        <a
+          href="Scheme-1.html"
+          class="group relative w-full bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-6 py-4 rounded-2xl font-bold text-center hover:from-yellow-300 hover:to-yellow-400 transition-all duration-300 shadow-lg hover:shadow-xl hover-glow transform hover:scale-105 flex items-center justify-center overflow-hidden"
+        >
+          <div
+            class="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"
+          ></div>
+          <i class="fas fa-coins mr-3 text-lg"></i>
+          <span class="relative z-10">Suvarna Sanchay</span>
+        </a>
+
+        <a
+          href="Scheme-2.html"
+          class="group relative w-full border-2 border-yellow-400 bg-transparent text-yellow-300 px-6 py-4 rounded-2xl text-center font-bold hover:bg-yellow-400 hover:text-black transition-all duration-300 shadow-lg hover:shadow-xl hover-glow transform hover:scale-105 flex items-center justify-center overflow-hidden"
+        >
+          <div
+            class="absolute inset-0 bg-yellow-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+          ></div>
+          <i class="fas fa-gem mr-3 text-lg relative z-10"></i>
+          <span class="relative z-10">Suvarna Bhishi</span>
+        </a>
+      </div>
+
+      <!-- Decorative Elements -->
+      <div class="absolute top-20 right-4 text-yellow-400/20 text-6xl">
+        <i class="fas fa-gem"></i>
+      </div>
+      <div class="absolute bottom-32 right-6 text-yellow-400/10 text-4xl">
+        <i class="fas fa-coins"></i>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-28 px-4 max-w-7xl mx-auto">
+      <!-- Category Tabs -->
+      <div class="flex justify-center mb-12">
+        <div class="bg-gray-100 p-2 rounded-2xl shadow-lg">
+          <div class="flex gap-2">
+            <div class="tab-button">
+              <a
+                href="#"
+                class="tab-active block px-8 py-3 rounded-xl font-semibold text-center transition-all duration-300 min-w-[120px]"
+              >
+                Gold
+              </a>
+            </div>
+            <div class="tab-button">
+              <a
+                href="#"
+                class="tab-inactive block px-8 py-3 rounded-xl font-semibold text-center transition-all duration-300 min-w-[120px]"
+              >
+                Diamond
+              </a>
+            </div>
+            <div class="tab-button">
+              <a
+                href="#"
+                class="tab-inactive block px-8 py-3 rounded-xl font-semibold text-center transition-all duration-300 min-w-[120px]"
+              >
+                Silver
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Products Section -->
+      <div class="category-grid">
+        <!-- Product Card 1 -->
+        <div class="product-card rounded-2xl overflow-hidden">
+          <!-- Image Container -->
+          <div
+            class="image-container h-80 flex items-center justify-center relative"
+          >
+            <img
+              src="https://shivanjalijewellers.com/static/media/Gold-Mangalsutra.86ef8b895c5b0da2a326.jpg"
+              alt="Gold Mangalsutra"
+              class="w-full h-full object-cover rounded-t-2xl relative z-10"
+            />
+          </div>
+
+          <!-- Product Info -->
+          <div class="p-6">
+            <!-- Product Name -->
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              Traditional Gold Mangalsutra
+            </h3>
+
+            <!-- Rating -->
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-300 fill-current"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+              </div>
+              <span class="text-sm text-gray-600 ml-2"
+                >(4.2) · 125 reviews</span
+              >
+            </div>
+
+            <!-- Price -->
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <span class="text-2xl font-bold text-orange-600">₹25,999</span>
+                <span class="text-lg text-gray-500 line-through ml-2"
+                  >₹29,999</span
+                >
+              </div>
+            </div>
+
+            <!-- Action Button -->
+            <button
+              class="w-full bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center group"
+            >
+              <svg
+                class="w-5 h-5 mr-2 group-hover:animate-pulse"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                />
+              </svg>
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="product-card rounded-2xl overflow-hidden">
+          <div
+            class="image-container h-80 flex items-center justify-center relative"
+          >
+            <img
+              src="https://shivanjalijewellers.com/static/media/Gold-Necklace-Set.d7c68a28f16b5991cdc6.jpg"
+              alt="Gold Mangalsutra"
+              class="w-full h-full object-cover rounded-t-2xl relative z-10"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              Nacklace Set
+            </h3>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+              </div>
+              <span class="text-sm text-gray-600 ml-2">(5.0) · 89 reviews</span>
+            </div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl font-bold text-orange-600">₹18,500</span>
+            </div>
+            <button
+              class="w-full bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center group"
+            >
+              <svg
+                class="w-5 h-5 mr-2 group-hover:animate-pulse"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                />
+              </svg>
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="product-card rounded-2xl overflow-hidden">
+          <div
+            class="image-container h-80 flex items-center justify-center relative"
+          >
+            <img
+              src="https://shivanjalijewellers.com/static/media/Gold-Necklace-1.689b0beddf07728fee92.jpg"
+              alt="Gold Mangalsutra"
+              class="w-full h-full object-cover rounded-t-2xl relative z-10"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              Necklace
+            </h3>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-300 fill-current"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+              </div>
+              <span class="text-sm text-gray-600 ml-2">(4.1) · 67 reviews</span>
+            </div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl font-bold text-orange-600">₹32,000</span>
+            </div>
+            <button
+              class="w-full bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center group"
+            >
+              <svg
+                class="w-5 h-5 mr-2 group-hover:animate-pulse"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                />
+              </svg>
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- product 4 -->
+        <div class="product-card rounded-2xl overflow-hidden">
+          <div
+            class="image-container h-80 flex items-center justify-center relative"
+          >
+            <img
+              src="https://shivanjalijewellers.com/static/media/Gold-Bracelet-1.50a4648a0c3a9fa48bca.jpg"
+              alt="Gold Mangalsutra"
+              class="w-full h-full object-cover rounded-t-2xl relative z-10"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              Bracelet
+            </h3>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-300 fill-current"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+              </div>
+              <span class="text-sm text-gray-600 ml-2">(4.1) · 67 reviews</span>
+            </div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl font-bold text-orange-600">₹32,000</span>
+            </div>
+            <button
+              class="w-full bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center group"
+            >
+              <svg
+                class="w-5 h-5 mr-2 group-hover:animate-pulse"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                />
+              </svg>
+              View Details
+            </button>
+          </div>
+        </div>
+        <!-- product 5 -->
+        <div class="product-card rounded-2xl overflow-hidden">
+          <div
+            class="image-container h-80 flex items-center justify-center relative"
+          >
+            <img
+              src="https://shivanjalijewellers.com/static/media/Gold-Daab.f64cd0e30612eec2bd67.jpg"
+              alt="Gold Mangalsutra"
+              class="w-full h-full object-cover rounded-t-2xl relative z-10"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              Daab
+            </h3>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-300 fill-current"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+              </div>
+              <span class="text-sm text-gray-600 ml-2">(4.1) · 67 reviews</span>
+            </div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl font-bold text-orange-600">₹32,000</span>
+            </div>
+            <button
+              class="w-full bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center group"
+            >
+              <svg
+                class="w-5 h-5 mr-2 group-hover:animate-pulse"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                />
+              </svg>
+              View Details
+            </button>
+          </div>
+        </div>
+        <!-- product 6 -->
+        <div class="product-card rounded-2xl overflow-hidden">
+          <div
+            class="image-container h-80 flex items-center justify-center relative"
+          >
+            <img
+              src="https://shivanjalijewellers.com/static/media/Gold-Earring.166c7db0ecfdbb69f2a2.jpg"
+              alt="Gold Mangalsutra"
+              class="w-full h-full object-cover rounded-t-2xl relative z-10"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+             Bangle
+            </h3>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-300 fill-current"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+              </div>
+              <span class="text-sm text-gray-600 ml-2">(4.1) · 67 reviews</span>
+            </div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl font-bold text-orange-600">₹32,000</span>
+            </div>
+            <button
+              class="w-full bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center group"
+            >
+              <svg
+                class="w-5 h-5 mr-2 group-hover:animate-pulse"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                />
+              </svg>
+              View Details
+            </button>
+          </div>
+        </div>
+        <!-- product 7 -->
+        <div class="product-card rounded-2xl overflow-hidden">
+          <div
+            class="image-container h-80 flex items-center justify-center relative"
+          >
+            <img
+              src="https://shivanjalijewellers.com/static/media/Gold-Haar.77fa7f2f117ad4d61ad4.jpg"
+              alt="Gold Mangalsutra"
+              class="w-full h-full object-cover rounded-t-2xl relative z-10"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+             Earring
+            </h3>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-300 fill-current"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+              </div>
+              <span class="text-sm text-gray-600 ml-2">(4.1) · 67 reviews</span>
+            </div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl font-bold text-orange-600">₹32,000</span>
+            </div>
+            <button
+              class="w-full bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center group"
+            >
+              <svg
+                class="w-5 h-5 mr-2 group-hover:animate-pulse"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                />
+              </svg>
+              View Details
+            </button>
+          </div>
+        </div>
+        <!-- product 8 -->
+        <div class="product-card rounded-2xl overflow-hidden">
+          <div
+            class="image-container h-80 flex items-center justify-center relative"
+          >
+            <img
+              src="https://shivanjalijewellers.com/static/media/Gold-Maang-Tikka.b56ba34a6751cf0b15d9.jpg"
+              alt="Gold Mangalsutra"
+              class="w-full h-full object-cover rounded-t-2xl relative z-10"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              Gold-Maang-Tikka
+            </h3>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-300 fill-current"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+              </div>
+              <span class="text-sm text-gray-600 ml-2">(4.1) · 67 reviews</span>
+            </div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl font-bold text-orange-600">₹32,000</span>
+            </div>
+            <button
+              class="w-full bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center group"
+            >
+              <svg
+                class="w-5 h-5 mr-2 group-hover:animate-pulse"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                />
+              </svg>
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      id="contact"
+      class="luxury-gradient text-gray-200 relative overflow-hidden"
+    >
+      <div class="absolute inset-0">
+        <div class="absolute top-0 left-0 w-full h-1 gold-gradient"></div>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Company Info -->
+          <div class="md:col-span-2">
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-16 h-16 rounded-full gold-gradient flex items-center justify-center text-white font-bold text-xl"
+              >
+                SJ
+              </div>
+              <div>
+                <div class="text-2xl font-luxury font-bold text-white">
+                  Shivanjali Jewellers
+                </div>
+                <div class="text-sm text-yellow-300 font-medium">
+                  PRECIOUS ORNAMENTS SINCE 1989
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              Three generations of trust and craftsmanship. We create jewelry
+              that celebrates life's most precious moments with unmatched
+              quality and timeless design.
+            </p>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-yellow-600 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-yellow-600 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-yellow-600 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg font-semibold text-white mb-4 font-luxury">
+              Quick Links
+            </h4>
+            <ul class="space-y-2 text-gray-300">
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-yellow-300 transition-colors duration-300"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-yellow-300 transition-colors duration-300"
+                  >Collections</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-yellow-300 transition-colors duration-300"
+                  >Investment Schemes</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-yellow-300 transition-colors duration-300"
+                  >Store Locator</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h4 class="text-lg font-semibold text-white mb-4 font-luxury">
+              Visit Us
+            </h4>
+            <div class="space-y-3 text-gray-300 text-sm">
+              <div class="flex items-start gap-2">
+                <i class="fas fa-map-marker-alt text-yellow-400 mt-1"></i>
+                <div>
+                  Azad Chowk, Raviwar Peth<br />Karad, Maharashtra 415110
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fas fa-phone text-yellow-400"></i>
+                <span>+91 91222 19595</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fas fa-envelope text-yellow-400"></i>
+                <span>info@shivanjalijewellers.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+          <p class="text-gray-400 text-sm">
+            © 2025 Shivanjali Jewellers. All Rights Reserved. |
+            <a
+              href="#"
+              class="hover:text-yellow-300 transition-colors duration-300"
+              >Privacy Policy</a
+            >
+            |
+            <a
+              href="#"
+              class="hover:text-yellow-300 transition-colors duration-300"
+              >Terms of Service</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div
+      class="md:hidden fixed inset-0 bg-black bg-opacity-50 z-50 hidden"
+      id="mobileMenu"
+    >
+      <div class="bg-white h-full w-80 p-6">
+        <div class="flex justify-between items-center mb-8">
+          <h2 class="text-xl font-bold">Menu</h2>
+          <button onclick="toggleMobileMenu()" class="text-gray-600">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <nav class="space-y-4">
+          <a
+            href="#"
+            class="block text-gray-700 hover:text-yellow-600 font-medium"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="block text-gray-700 hover:text-yellow-600 font-medium"
+            >Collections</a
+          >
+          <a
+            href="#"
+            class="block text-gray-700 hover:text-yellow-600 font-medium"
+            >About Us</a
+          >
+          <a
+            href="#"
+            class="block text-gray-700 hover:text-yellow-600 font-medium"
+            >News & Events</a
+          >
+          <a
+            href="#"
+            class="block text-gray-700 hover:text-yellow-600 font-medium"
+            >Contact Us</a
+          >
+        </nav>
+      </div>
+    </div>
+
+    <script>
+      // Mobile menu toggle
+      const mobileBtn = document.getElementById("mobileBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const overlay = document.getElementById("overlay");
+
+      mobileBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("-translate-x-full");
+        overlay.classList.toggle("hidden");
+        setTimeout(() => overlay.classList.toggle("opacity-0"), 10);
+
+        // Prevent background scroll
+        document.body.classList.toggle("overflow-hidden");
+      });
+
+      overlay.addEventListener("click", () => {
+        mobileMenu.classList.add("-translate-x-full");
+        overlay.classList.add("opacity-0");
+        setTimeout(() => overlay.classList.add("hidden"), 300);
+
+        document.body.classList.remove("overflow-hidden");
+      });
+
+      // Add smooth scrolling and mobile menu functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        // Mobile menu button
+        const mobileMenuBtn = document.querySelector(".md\\:hidden button");
+        if (mobileMenuBtn) {
+          mobileMenuBtn.addEventListener("click", toggleMobileMenu);
+        }
+
+        // Close mobile menu when clicking outside
+        document
+          .getElementById("mobileMenu")
+          .addEventListener("click", function (e) {
+            if (e.target === this) {
+              toggleMobileMenu();
+            }
+          });
+      });
+    </script>
+  </body>
+</html>
