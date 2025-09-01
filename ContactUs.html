@@ -23,48 +23,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <style>
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(-10px);
-        }
-      }
-
-      .fade-in {
-        animation: fadeInUp 0.8s ease-out;
-      }
-
-      .float {
-        animation: float 3s ease-in-out infinite;
-      }
-
-      .bg-gradient-gold {
-        background: linear-gradient(135deg, #f9f7f4 0%, #f4e4c1 100%);
-      }
-
-      .bg-gradient-gold-dark {
-        background: linear-gradient(135deg, #b8860b 0%, #d4af37 100%);
-      }
-
-      .text-shadow {
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-      }
-    </style>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body class="bg-gray-50 text-gray-900 font-modern">
@@ -265,306 +223,212 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section
-      class="bg-gradient-gold py-20 text-center relative overflow-hidden"
-    >
-      <div class="absolute inset-0 opacity-10">
-        <div
-          class="absolute top-20 left-20 w-32 h-32 bg-gold rounded-full float"
-        ></div>
-        <div
-          class="absolute top-40 right-32 w-20 h-20 bg-gold-dark rounded-full float"
-          style="animation-delay: -1s"
-        ></div>
-        <div
-          class="absolute bottom-20 left-1/3 w-24 h-24 bg-gold rounded-full float"
-          style="animation-delay: -2s"
-        ></div>
-      </div>
-
-      <div class="container mx-auto px-6 relative z-10">
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-6 py-12">
+      <!-- Page Title -->
+      <div class="text-center mb-16">
         <h1
-          class="text-5xl md:text-6xl lg:text-7xl font-light text-gold-dark mb-6 text-shadow fade-in"
+          class="text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4"
         >
-          About <span class="font-semibold text-gold">Shivanjali</span>
+          Get In Touch
         </h1>
-        <div class="w-24 h-1 bg-gradient-gold-dark mx-auto mb-8"></div>
-        <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-          Where tradition meets modernity, and every piece tells a story of
-          unmatched craftsmanship and timeless beauty.
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Visit our showroom or reach out to us for exquisite jewelry
+          collections and personalized service
         </p>
       </div>
-    </section>
 
-    <!-- Main About Section -->
-    <section class="py-20">
-      <div class="container mx-auto px-6">
-        <div class="grid md:grid-cols-2 gap-16 items-center">
-          <!-- Founder Image -->
-          <div class="text-center fade-in">
-            <div class="relative inline-block">
-              <img
-                src="https://shivanjalijewellers.com/static/media/UdayPawar.65a1f95ab8283de94fde.png"
-                alt="Uday Uttam Pawar"
-                class="rounded-3xl shadow-2xl border-4 border-gold-light hover:shadow-3xl transition-all duration-500 hover:scale-105"
-              />
-              <div
-                class="absolute -top-4 -right-4 w-8 h-8 bg-gradient-gold-dark rounded-full animate-pulse"
-              ></div>
-            </div>
-            <h3 class="text-2xl font-semibold text-gold-dark mt-6 mb-2">
-              Uday Uttam Pawar
-            </h3>
-            <p class="text-gray-600 italic">Founder & Visionary</p>
-          </div>
-
-          <!-- About Content -->
-          <div class="fade-in">
-            <h2
-              class="text-4xl md:text-5xl font-light text-gold-dark mb-8 leading-tight"
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <!-- Map Section -->
+        <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+          <div class="h-96 relative">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.09016899277!2d74.17980419999999!3d17.287288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc183a17118a73f%3A0x74d05e778af0fbd6!2sShivanjali%20Jewellers!5e1!3m2!1sen!2sin!4v1756699980362!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="w-full h-full"
             >
-              Crafting Timeless
-              <span class="block text-gold font-semibold"
-                >Elegance Since 2003</span
-              >
-            </h2>
-
-            <div class="space-y-6 text-gray-700 text-lg leading-relaxed">
-              <p>
-                Welcome to Shivanjali Jewellers, where tradition meets
-                modernity, and every piece tells a story of unmatched
-                craftsmanship and timeless beauty. Established in 2003 by Uday
-                Uttam Pawar, we have been proudly serving the people of Karad,
-                Maharashtra, with the finest collection of Gold, Silver, and
-                Diamond jewellery.
-              </p>
-
-              <p>
-                Our shop is located at Azad Chowk, Raviwar Peth, a hub of
-                cultural richness, where we continue to build trust with each
-                customer who walks through our doors.
-              </p>
-
-              <p>
-                At Shivanjali Jewellers, we understand the emotional value that
-                jewellery holds. Whether you're celebrating a special occasion,
-                preserving a family tradition, or simply adding elegance to your
-                everyday life, our stunning collections are designed to make
-                every moment unforgettable.
-              </p>
-            </div>
-
-            <div class="mt-8 flex flex-wrap gap-4">
-              <div class="bg-gold-light px-4 py-2 rounded-full">
-                <span class="text-gold-dark font-semibold"
-                  >✨ Gold Jewellery</span
-                >
-              </div>
-              <div class="bg-gold-light px-4 py-2 rounded-full">
-                <span class="text-gold-dark font-semibold"
-                  >💎 Diamond Collection</span
-                >
-              </div>
-              <div class="bg-gold-light px-4 py-2 rounded-full">
-                <span class="text-gold-dark font-semibold"
-                  >🥈 Silver Ornaments</span
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="bg-gradient-gold-dark py-16 text-white">
-      <div class="container mx-auto px-6">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div class="fade-in">
-            <div class="text-5xl font-bold mb-3">20+</div>
-            <div class="text-lg opacity-90">Years of Excellence</div>
-          </div>
-          <div class="fade-in" style="animation-delay: 0.2s">
-            <div class="text-5xl font-bold mb-3">5000+</div>
-            <div class="text-lg opacity-90">Happy Customers</div>
-          </div>
-          <div class="fade-in" style="animation-delay: 0.4s">
-            <div class="text-5xl font-bold mb-3">500+</div>
-            <div class="text-lg opacity-90">Unique Designs</div>
-          </div>
-          <div class="fade-in" style="animation-delay: 0.6s">
-            <div class="text-5xl font-bold mb-3">100%</div>
-            <div class="text-lg opacity-90">Authentic Quality</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Values Section -->
-    <section class="py-20 bg-gradient-gold">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-light text-gold-dark mb-6">
-            Our Core Values
-          </h2>
-          <div class="w-24 h-1 bg-gradient-gold-dark mx-auto"></div>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-          <div
-            class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:transform hover:-translate-y-2 fade-in"
-          >
+            </iframe>
             <div
-              class="w-16 h-16 bg-gradient-gold-dark rounded-full flex items-center justify-center text-white text-2xl mb-6 mx-auto"
-            >
-              🎨
-            </div>
-            <h3 class="text-xl font-semibold text-gold-dark mb-4 text-center">
-              Craftsmanship
-            </h3>
-            <p class="text-gray-600 text-center leading-relaxed">
-              Every piece is meticulously crafted by skilled artisans, ensuring
-              the highest quality and attention to detail in every design.
-            </p>
-          </div>
-
-          <div
-            class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:transform hover:-translate-y-2 fade-in"
-            style="animation-delay: 0.2s"
-          >
-            <div
-              class="w-16 h-16 bg-gradient-gold-dark rounded-full flex items-center justify-center text-white text-2xl mb-6 mx-auto"
-            >
-              🤝
-            </div>
-            <h3 class="text-xl font-semibold text-gold-dark mb-4 text-center">
-              Trust
-            </h3>
-            <p class="text-gray-600 text-center leading-relaxed">
-              Built on decades of honest relationships, we've earned the trust
-              of families across generations through transparent dealings.
-            </p>
-          </div>
-
-          <div
-            class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:transform hover:-translate-y-2 fade-in"
-            style="animation-delay: 0.4s"
-          >
-            <div
-              class="w-16 h-16 bg-gradient-gold-dark rounded-full flex items-center justify-center text-white text-2xl mb-6 mx-auto"
-            >
-              💎
-            </div>
-            <h3 class="text-xl font-semibold text-gold-dark mb-4 text-center">
-              Quality
-            </h3>
-            <p class="text-gray-600 text-center leading-relaxed">
-              We source only the finest materials and maintain rigorous quality
-              standards to ensure lasting beauty and value.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Legacy Section -->
-    <section class="py-20">
-      <div class="container mx-auto px-6">
-        <div class="max-w-4xl mx-auto text-center">
-          <h2 class="text-4xl md:text-5xl font-light text-gold-dark mb-8">
-            A Legacy of <span class="text-gold font-semibold">Excellence</span>
-          </h2>
-
-          <div
-            class="bg-white p-10 rounded-3xl shadow-xl relative overflow-hidden"
-          >
-            <div
-              class="absolute top-0 left-0 w-full h-2 bg-gradient-gold-dark"
+              class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg p-3 shadow-lg"
             ></div>
+          </div>
 
-            <p class="text-xl text-gray-700 leading-relaxed mb-8">
-              "We specialize in offering the finest gold, silver, and diamond
-              jewellery that reflects both modern trends and traditional values.
-              Each piece in our collection is carefully selected to ensure it
-              meets our high standards of quality and craftsmanship."
-            </p>
+          <!-- Contact Information -->
+          <div class="p-8 space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <!-- Address -->
+              <div class="space-y-3">
+                <h3
+                  class="text-lg font-semibold text-gray-800 flex items-center"
+                >
+                  <i class="fas fa-map-marker-alt text-red-500 mr-3"></i>
+                  ADDRESS
+                </h3>
+                <p class="text-gray-600 leading-relaxed">
+                  Azad Chowk, Raviwar Peth, Karad,<br />
+                  Maharashtra 415110
+                </p>
+              </div>
 
-            <div class="flex items-center justify-center gap-4">
-              <div
-                class="w-12 h-12 bg-gradient-gold-dark rounded-full flex items-center justify-center"
+              <!-- Phone -->
+              <div class="space-y-3">
+                <h3
+                  class="text-lg font-semibold text-gray-800 flex items-center"
+                >
+                  <i class="fas fa-phone text-green-500 mr-3"></i>
+                  PHONE
+                </h3>
+                <a
+                  href="tel:+919823347999"
+                  class="text-gray-600 hover:text-primary transition-colors"
+                >
+                  +91 9823347999
+                </a>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="space-y-3">
+              <h3 class="text-lg font-semibold text-gray-800 flex items-center">
+                <i class="fas fa-envelope text-blue-500 mr-3"></i>
+                EMAIL
+              </h3>
+              <a
+                href="mailto:pawaruday562@gmail.com"
+                class="text-gray-600 hover:text-primary transition-colors"
               >
-                <span class="text-white font-bold text-lg">SJ</span>
+                pawaruday562@gmail.com
+              </a>
+            </div>
+
+            <!-- Directions Button -->
+            <button
+              class="w-full bg-gradient-to-r from-primary to-secondary text-white py-3 px-6 rounded-xl font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
+            >
+              <i class="fas fa-directions mr-2"></i>
+              Get Directions
+            </button>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="bg-white rounded-2xl shadow-2xl p-8">
+          <div class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">
+              Send us a Message
+            </h2>
+            <p class="text-gray-600">
+              We'd love to hear from you. Send us a message and we'll respond as
+              soon as possible.
+            </p>
+          </div>
+
+          <form class="space-y-6" onsubmit="handleFormSubmit(event)">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="relative">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                  class="w-full px-4 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 peer"
+                />
+                <label
+                  for="name"
+                  class="absolute left-4 -top-6 text-sm font-medium text-gray-700"
+                >
+                  Name <span class="text-red-500">*</span>
+                </label>
               </div>
-              <div class="text-left">
-                <div class="font-semibold text-gold-dark">
-                  Shivanjali Jewellers
-                </div>
-                <div class="text-sm text-gray-600">Karad, Maharashtra</div>
+
+              <div class="relative">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="your.email@example.com"
+                  required
+                  class="w-full px-4 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
+                />
+                <label
+                  for="email"
+                  class="absolute left-4 -top-6 text-sm font-medium text-gray-700"
+                >
+                  Email <span class="text-red-500">*</span>
+                </label>
               </div>
+            </div>
+
+            <div class="relative">
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+91 98233 47999"
+                class="w-full px-4 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
+              />
+              <label
+                for="phone"
+                class="absolute left-4 -top-6 text-sm font-medium text-gray-700"
+              >
+                Phone Number
+              </label>
+            </div>
+
+            <div class="relative">
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Tell us about your jewelry requirements, special occasions, or any questions you may have..."
+                required
+                class="w-full px-4 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 resize-none"
+              ></textarea>
+              <label
+                for="message"
+                class="absolute left-4 -top-6 text-sm font-medium text-gray-700"
+              >
+                Message <span class="text-red-500">*</span>
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full bg-gradient-to-r from-yellow-400 to-yellow-600 text-white py-4 px-8 rounded-xl font-bold text-lg hover:from-yellow-500 hover:to-yellow-700 transform hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+            >
+              <i class="fas fa-paper-plane mr-2"></i>
+              Send Message
+            </button>
+          </form>
+
+          <!-- Success Message (Hidden by default) -->
+          <div
+            id="successMessage"
+            class="hidden mt-6 p-4 bg-green-100 border border-green-200 rounded-xl"
+          >
+            <div class="flex items-center">
+              <i class="fas fa-check-circle text-green-500 mr-3"></i>
+              <span class="text-green-700 font-medium"
+                >Thank you for your message! We'll get back to you soon.</span
+              >
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </main>
 
-    <!-- Location Section -->
-    <section class="py-16 bg-gradient-gold">
-      <div class="container mx-auto px-6">
-        <div class="text-center max-w-3xl mx-auto">
-          <h2 class="text-3xl md:text-4xl font-light text-gold-dark mb-6">
-            Visit Our Store
-          </h2>
-          <p class="text-lg text-gray-700 mb-8">
-            Located in the heart of Karad's cultural district, our showroom at
-            Azad Chowk, Raviwar Peth offers an immersive experience where you
-            can explore our exquisite collections in person.
-          </p>
-
-          <div class="bg-white p-8 rounded-2xl shadow-lg inline-block">
-            <div class="flex items-center gap-3 text-gold-dark">
-              <span class="text-2xl">📍</span>
-              <div class="text-left">
-                <div class="font-semibold text-lg">
-                  Azad Chowk, Raviwar Peth
-                </div>
-                <div class="text-gray-600">Karad, Maharashtra</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="py-20 text-center">
-      <div class="container mx-auto px-6">
-        <h2 class="text-4xl md:text-5xl font-light text-gold-dark mb-6">
-          Ready to Find Your Perfect Piece?
-        </h2>
-        <p class="text-xl text-gray-700 max-w-2xl mx-auto mb-10">
-          Discover our extensive collection and let us help you find jewellery
-          that tells your unique story.
-        </p>
-
-        <div class="flex flex-col sm:flex-row gap-6 justify-center">
-          <a
-            href="#collections"
-            class="bg-gradient-gold-dark text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transition-all duration-300 hover:transform hover:-translate-y-1 inline-flex items-center gap-3"
-          >
-            <span>Explore Collections</span>
-            <span>✨</span>
-          </a>
-          <a
-            href="#contact"
-            class="border-2 border-gold-dark text-gold-dark px-8 py-4 rounded-full text-lg font-semibold hover:bg-gold-dark hover:text-white transition-all duration-300 hover:transform hover:-translate-y-1 inline-flex items-center gap-3"
-          >
-            <span>Contact Us</span>
-            <span>📞</span>
-          </a>
-        </div>
-      </div>
-    </section>
     <!-- Enhanced Footer -->
     <footer
       id="contact"
@@ -721,35 +585,6 @@
         setTimeout(() => overlay.classList.add("hidden"), 300);
 
         document.body.classList.remove("overflow-hidden");
-      });
-
-      // Add scroll animations
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("fade-in");
-          }
-        });
-      }, observerOptions);
-
-      document.querySelectorAll("section > div").forEach((el) => {
-        observer.observe(el);
-      });
-
-      // Add hover effects to value cards
-      document.querySelectorAll(".hover\\:transform").forEach((card) => {
-        card.addEventListener("mouseenter", () => {
-          card.style.transform = "translateY(-8px) scale(1.02)";
-        });
-
-        card.addEventListener("mouseleave", () => {
-          card.style.transform = "translateY(0) scale(1)";
-        });
       });
     </script>
   </body>
