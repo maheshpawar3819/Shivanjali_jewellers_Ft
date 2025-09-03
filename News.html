@@ -1,23 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Shivanjali Jewellers - Premium Gold & Diamond Jewelry</title>
-
-    <!-- Tailwind Play CDN -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shivanjali Jewellers Blog</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <!-- Swiper for sliders -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@9/swiper-bundle.min.css"
-    />
-    <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
     <!-- Font Awesome for icons -->
     <link
       rel="stylesheet"
@@ -25,81 +17,179 @@
     />
     <link rel="stylesheet" href="style.css" />
     <style>
-      .tab-active {
-        background: linear-gradient(135deg, #f59e0b, #f97316);
-        color: white;
-        box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
-        transform: translateY(-2px);
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #fcfaf7;
+        color: #1a1a1a;
       }
-
-      .tab-inactive {
-        background: white;
-        color: #6b7280;
-        border: 2px solid #e5e7eb;
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
       }
-
-      .tab-inactive:hover {
-        background: #f9fafb;
-        color: #f59e0b;
-        border-color: #f59e0b;
-      }
-
-      .product-card {
-        padding: 10px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-        height: auto;
-      }
-
-      .product-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-      }
-
-      .image-container {
-        position: relative;
+      .news-card {
+        background-color: #ffffff;
+        border-radius: 0.75rem;
         overflow: hidden;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #f0e9dc;
+      }
+      .news-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+      }
+      .news-card-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+      }
+      .news-card:hover .news-card-image {
+        transform: scale(1.03);
+      }
+      .news-card-content {
+        padding: 1.25rem;
+        flex-grow: 1;
+      }
+      .news-card-title {
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: #2c3e50;
+        line-height: 1.4;
+        margin-bottom: 0.5rem;
+      }
+      .news-card-description {
+        font-size: 0.875rem;
+        color: #7f8c8d;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+        flex-grow: 1;
+      }
+      .read-more-link {
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: #bfa571;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      .read-more-link:hover {
+        color: #9c845b;
+        text-decoration: underline;
       }
 
-      .image-container::before {
+      /* Responsive timeline styles */
+      .timeline {
+        position: relative;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      /* The timeline vertical line is only visible on large screens (md) */
+      .timeline::before {
         content: "";
         position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(
-          circle,
-          rgba(255, 255, 255, 0.3) 0%,
-          transparent 70%
-        );
-        animation: shimmer 3s ease-in-out infinite;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background-color: #bfa571;
+        z-index: 10;
+        display: none;
       }
 
-      @keyframes shimmer {
-        0%,
-        100% {
-          transform: rotate(0deg);
+      @media (min-width: 768px) {
+        .timeline {
+          background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d3c7b3' fill-opacity='0.2'%3E%3Cpath d='M25 0L50 25L25 50L0 25L25 0ZM75 0L100 25L75 50L50 25L75 0ZM25 50L50 75L25 100L0 75L25 50ZM75 50L100 75L75 100L50 75L75 50Z'/%3E%3C/g%3E%3C/svg%3E");
+          background-size: 100px 100px;
         }
-        50% {
-          transform: rotate(180deg);
+        .timeline::before {
+          display: block;
+          left: 50%;
+          transform: translateX(-50%);
         }
       }
 
-      .category-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
-        gap: 2rem;
+      .timeline-item {
+        position: relative;
+        margin-bottom: 2.5rem; /* Reduced margin for mobile */
       }
 
-      @media (max-width: 768px) {
-        .category-grid {
-          grid-template-columns: 1fr;
+      .timeline-item-left,
+      .timeline-item-right {
+        display: flex;
+        flex-direction: column;
+        padding: 0; /* Removed padding for mobile */
+      }
+
+      @media (min-width: 768px) {
+        .timeline-item-left {
+          justify-content: flex-end;
+          padding-right: 3rem;
+          padding-left: 0;
+          flex-direction: row;
         }
+        .timeline-item-right {
+          justify-content: flex-start;
+          padding-left: 3rem;
+          padding-right: 0;
+          flex-direction: row;
+        }
+      }
+
+      /* The timeline indicator is only visible on large screens (md) */
+      .timeline-indicator {
+        display: none;
+      }
+
+      @media (min-width: 768px) {
+        .timeline-indicator {
+          display: block;
+          position: absolute;
+          top: 1rem;
+          width: 1rem;
+          height: 1rem;
+          background-color: #bfa571;
+          border-radius: 50%;
+          border: 2px solid #ffffff;
+          z-index: 20;
+          box-shadow: 0 0 0 2px rgba(191, 165, 113, 0.4);
+        }
+        .timeline-item-left .timeline-indicator {
+          right: -0.5rem;
+          left: unset;
+        }
+        .timeline-item-right .timeline-indicator {
+          left: -0.5rem;
+          right: unset;
+        }
+      }
+
+      .timeline-card-width {
+        width: 100%;
+      }
+
+      @media (min-width: 768px) {
+        .timeline-card-width {
+          width: calc(50% - 3rem);
+        }
+      }
+
+      .featured-card-image {
+        height: 300px;
+      }
+      .featured-card-title {
+        font-size: 1.5rem;
+      }
+      .featured-card-description {
+        font-size: 1rem;
       }
     </style>
   </head>
-  <body class="bg-gray-50 text-gray-900 font-modern">
+  <body class="antialiased">
     <!-- Enhanced Navigation -->
     <header class="fixed w-full z-50 glass-dark backdrop-blur-lg">
       <div
@@ -146,7 +236,7 @@
               class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-300 transition-all duration-300 group-hover:w-full"
             ></span>
           </a>
-          <a class="hover:text-yellow-300 relative group" href="News.html"
+          <a class="hover:text-yellow-300 relative group" href="#news & events"
             >News & Events
             <span
               class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-300 transition-all duration-300 group-hover:w-full"
@@ -295,169 +385,148 @@
       </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="pt-28 px-4 max-w-7xl mx-auto">
-      <!-- Category Tabs -->
-      <div class="flex justify-center mb-12">
-        <div class="bg-gray-100 p-2 rounded-2xl shadow-lg">
-          <div class="flex gap-2">
-            <div class="tab-button">
-              <a
-                href="#"
-                class="tab-active block px-8 py-3 rounded-xl font-semibold text-center transition-all duration-300 min-w-[120px]"
-              >
-                Gold
-              </a>
-            </div>
-            <div class="tab-button">
-              <a
-                href="#"
-                class="tab-inactive block px-8 py-3 rounded-xl font-semibold text-center transition-all duration-300 min-w-[120px]"
-              >
-                Diamond
-              </a>
-            </div>
-            <div class="tab-button">
-              <a
-                href="#"
-                class="tab-inactive block px-8 py-3 rounded-xl font-semibold text-center transition-all duration-300 min-w-[120px]"
-              >
-                Silver
-              </a>
-            </div>
-          </div>
-        </div>
+    <main class="container py-16">
+      <div class="text-center mb-12 mt-20">
+        <h1 class="text-4xl md:text-5xl font-extrabold mt-2 text-gray-900">
+          Our Timeline of Events
+        </h1>
       </div>
 
-      <!-- Products Section -->
-      <div class="category-grid">
-        <!-- Product Card 1 -->
-        <div class="product-card rounded-2xl overflow-hidden">
-          <!-- Image Container -->
-          <div
-            class="image-container h-[450px] flex items-center justify-center relative"
-          >
-            <img
-              src="https://shivanjalijewellers.com/static/media/Gold-Mangalsutra.86ef8b895c5b0da2a326.jpg"
-              alt="Gold Mangalsutra"
-              class="w-full h-full object-cover rounded-2xl relative z-10"
-            />
-          </div>
-
-          <!-- Product Info -->
-          <div class="p-6 text-center">
-            <!-- Product Name -->
-            <h3 class="text-xl font-bold text-gray-800 mb-3">
-              Traditional Gold Mangalsutra
-            </h3>
-          </div>
-        </div>
-
-        <!-- Product Card 2 -->
-        <div class="product-card rounded-2xl overflow-hidden">
-          <div
-            class="image-container h-[450px] flex items-center justify-center relative"
-          >
-            <img
-              src="https://shivanjalijewellers.com/static/media/Gold-Necklace-Set.d7c68a28f16b5991cdc6.jpg"
-              alt="Gold Mangalsutra"
-              class="w-full h-full object-cover rounded-2xl relative z-10"
-            />
-          </div>
-          <div class="p-6 text-center">
-            <h3 class="text-xl font-bold text-gray-800 mb-3">Nacklace Set</h3>
+      <div class="timeline flex flex-col items-center">
+        <div class="timeline-item timeline-item-left w-full">
+          <div class="timeline-indicator"></div>
+          <div class="news-card timeline-card-width max-w-xl">
+            <div class="relative overflow-hidden">
+              <img
+                src="https://shivanjalijewellers.com/static/media/blog-1.ba03ed45aa7a7163a339.jpeg"
+                alt="Featured News Image 1"
+                class="news-card-image featured-card-image"
+              />
+            </div>
+            <div class="news-card-content">
+              <h2 class="news-card-title featured-card-title">
+                जीवन आणि सौंदर्य करणारे मुहूर्त महोत्सव
+              </h2>
+              <p class="news-card-description featured-card-description">
+                शिवांजली ज्वेलर्सने आपल्या ग्राहकांसाठी घेऊन येत आहे एका खास
+                सुवर्ण संधी ... मुहूर्त महोत्सव... हा महोत्सव सौंदर्य आणि
+                समृद्धीचे प्रतीक आहे.
+              </p>
+              <a href="#" class="read-more-link">Read more</a>
+            </div>
           </div>
         </div>
 
-        <!-- Product Card 3 -->
-        <div class="product-card rounded-2xl overflow-hidden">
-          <div
-            class="image-container h-[450px] flex items-center justify-center relative"
-          >
-            <img
-              src="https://shivanjalijewellers.com/static/media/Gold-Necklace-1.689b0beddf07728fee92.jpg"
-              alt="Gold Mangalsutra"
-              class="w-full h-full object-cover rounded-2xl relative z-10"
-            />
-          </div>
-          <div class="p-6 text-center">
-            <h3 class="text-xl font-bold text-gray-800 mb-3">Necklace</h3>
+        <div class="timeline-item timeline-item-right w-full">
+          <div class="timeline-indicator"></div>
+          <div class="news-card timeline-card-width max-w-xl">
+            <div class="relative overflow-hidden">
+              <img
+                src="https://shivanjalijewellers.com/static/media/news1.86cac5ee195df46c68ca.jpeg"
+                alt="News Image 2"
+                class="news-card-image"
+              />
+            </div>
+            <div class="news-card-content">
+              <h2 class="news-card-title">
+                शिवांजली ज्वेलर्सच्या मुहूर्त महोत्सवाला उत्स्फूर्त प्रतिसाद:
+              </h2>
+              <p class="news-card-description">
+                • कराड: शिवांजली ज्वेलर्स, कराड येथे २ मार्च ते ३१ मे २०२५
+                दरम्यान आयोजित करण्यात आलेल्या "मुहूर्त महोत्सव"...
+              </p>
+              <a href="#" class="read-more-link">Read more</a>
+            </div>
           </div>
         </div>
 
-        <!-- product 4 -->
-        <div class="product-card rounded-2xl overflow-hidden">
-          <div
-            class="image-container h-[450px] flex items-center justify-center relative"
-          >
-            <img
-              src="https://shivanjalijewellers.com/static/media/Gold-Bracelet-1.50a4648a0c3a9fa48bca.jpg"
-              alt="Gold Mangalsutra"
-              class="w-full h-full object-cover rounded-2xl relative z-10"
-            />
-          </div>
-          <div class="p-6 text-center">
-            <h3 class="text-xl font-bold text-gray-800 mb-3">Bracelet</h3>
-          </div>
-        </div>
-        <!-- product 5 -->
-        <div class="product-card rounded-2xl overflow-hidden">
-          <div
-            class="image-container h-[450px] flex items-center justify-center relative"
-          >
-            <img
-              src="https://shivanjalijewellers.com/static/media/Gold-Daab.f64cd0e30612eec2bd67.jpg"
-              alt="Gold Mangalsutra"
-              class="w-full h-full object-cover rounded-2xl relative z-10"
-            />
-          </div>
-          <div class="p-6 text-center">
-            <h3 class="text-xl font-bold text-gray-800 mb-3">Daab</h3>
+        <div class="timeline-item timeline-item-left w-full">
+          <div class="timeline-indicator"></div>
+          <div class="news-card timeline-card-width max-w-xl">
+            <div class="relative overflow-hidden">
+              <img
+                src="https://shivanjalijewellers.com/static/media/news2.2d23116c2876e1ad2543.jpeg"
+                alt="News Image 3"
+                class="news-card-image"
+              />
+            </div>
+            <div class="news-card-content">
+              <h2 class="news-card-title">
+                शिवांजली ज्वेलर्सच्या मुहूर्त महोत्सवास प्रचंड प्रतिसाद
+              </h2>
+              <p class="news-card-description">
+                कराड - पुरोहित दुमाला कराड येथे गेल्या २१ वर्षापासून अग्रगण्य
+                सुवर्णपेढी शिवांजली ज्वेलर्स येथे “मुहूर्त महोत्सव” चे आयोजन
+                करण्यात आले होते...
+              </p>
+              <a href="#" class="read-more-link">Read more</a>
+            </div>
           </div>
         </div>
-        <!-- product 6 -->
-        <div class="product-card rounded-2xl overflow-hidden">
-          <div
-            class="image-container h-[450px] flex items-center justify-center relative"
-          >
-            <img
-              src="https://shivanjalijewellers.com/static/media/Gold-Earring.166c7db0ecfdbb69f2a2.jpg"
-              alt="Gold Mangalsutra"
-              class="w-full h-full object-cover rounded-2xl relative z-10"
-            />
-          </div>
-          <div class="p-6 text-center">
-            <h3 class="text-xl font-bold text-gray-800 mb-3">Bangle</h3>
-          </div>
-        </div>
-        <!-- product 7 -->
-        <div class="product-card rounded-2xl overflow-hidden">
-          <div
-            class="image-container h-[450px] flex items-center justify-center relative"
-          >
-            <img
-              src="https://shivanjalijewellers.com/static/media/Gold-Haar.77fa7f2f117ad4d61ad4.jpg"
-              alt="Gold Mangalsutra"
-              class="w-full h-full object-cover rounded-2xl relative z-10"
-            />
-          </div>
-          <div class="p-6 text-center">
-            <h3 class="text-xl font-bold text-gray-800 mb-3">Earring</h3>
+
+        <div class="timeline-item timeline-item-right w-full">
+          <div class="timeline-indicator"></div>
+          <div class="news-card timeline-card-width max-w-xl">
+            <div class="relative overflow-hidden">
+              <img
+                src="https://shivanjalijewellers.com/static/media/news3.210f2c43c39a0a1d0ead.jpeg"
+                alt="News Image 4"
+                class="news-card-image"
+              />
+            </div>
+            <div class="news-card-content">
+              <h2 class="news-card-title">
+                कराड: शिवांजली ज्वेलर्सच्या मुहूर्त महोत्सवाचे उद्घाटन
+              </h2>
+              <p class="news-card-description">
+                शिवांजली ज्वेलर्सचा मुहूर्त महोत्सव महिलांचा सोहळास: हजारो
+                ग्राहकांना शिवांजली ज्वेलर्सची २१ वर्षांपासून सुवर्ण विश्वासू
+                ओळख आहे...
+              </p>
+              <a href="#" class="read-more-link">Read more</a>
+            </div>
           </div>
         </div>
-        <!-- product 8 -->
-        <div class="product-card rounded-2xl overflow-hidden">
-          <div
-            class="image-container h-[450px] flex items-center justify-center relative"
-          >
-            <img
-              src="https://shivanjalijewellers.com/static/media/Gold-Maang-Tikka.b56ba34a6751cf0b15d9.jpg"
-              alt="Gold Mangalsutra"
-              class="w-full h-full object-cover rounded-2xl relative z-10"
-            />
+
+        <div class="timeline-item timeline-item-left w-full">
+          <div class="timeline-indicator"></div>
+          <div class="news-card timeline-card-width max-w-xl">
+            <div class="relative overflow-hidden">
+              <img
+                src="https://shivanjalijewellers.com/static/media/news4.3343e64e22c4b2fa0814.jpeg"
+                alt="News Image 5"
+                class="news-card-image"
+              />
+            </div>
+            <div class="news-card-content">
+              <h2 class="news-card-title">
+                अभिषेक चित्रगुप्तांना जयश्री महाले यांचा सत्कार
+              </h2>
+              <p class="news-card-description">
+                शिवांजली ज्वेलर्स येथे आयोजित सोहळा...
+              </p>
+              <a href="#" class="read-more-link">Read more</a>
+            </div>
           </div>
-          <div class="p-6 text-center">
-            <h3 class="text-xl font-bold text-gray-800 mb-3">Maang-</h3>
+        </div>
+
+        <div class="timeline-item timeline-item-right w-full">
+          <div class="timeline-indicator"></div>
+          <div class="news-card timeline-card-width max-w-xl">
+            <div class="relative overflow-hidden">
+              <img
+                src="https://shivanjalijewellers.com/static/media/news6.c00d1699851af40dbf91.jpeg"
+                alt="News Image 6"
+                class="news-card-image"
+              />
+            </div>
+            <div class="news-card-content">
+              <h2 class="news-card-title">दत्तात्रय महाले यांचा सत्कार</h2>
+              <p class="news-card-description">
+                दत्तू सरसवा यांचा सत्कार शिबांजली ज्वेलर्सकडून.
+              </p>
+              <a href="#" class="read-more-link">Read more</a>
+            </div>
           </div>
         </div>
       </div>
@@ -614,24 +683,6 @@
         setTimeout(() => overlay.classList.add("hidden"), 300);
 
         document.body.classList.remove("overflow-hidden");
-      });
-
-      // Add smooth scrolling and mobile menu functionality
-      document.addEventListener("DOMContentLoaded", function () {
-        // Mobile menu button
-        const mobileMenuBtn = document.querySelector(".md\\:hidden button");
-        if (mobileMenuBtn) {
-          mobileMenuBtn.addEventListener("click", toggleMobileMenu);
-        }
-
-        // Close mobile menu when clicking outside
-        document
-          .getElementById("mobileMenu")
-          .addEventListener("click", function (e) {
-            if (e.target === this) {
-              toggleMobileMenu();
-            }
-          });
       });
     </script>
   </body>
