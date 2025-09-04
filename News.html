@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shivanjali Jewellers Blog</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
     <!-- Font Awesome for icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
       body {
-        font-family: "Roboto", sans-serif;
-        background-color: #fcfaf7;
+        font-family: "Inter", sans-serif;
+        background-color: #f7f8fa;
         color: #1a1a1a;
       }
       .container {
@@ -28,43 +28,42 @@
         margin: 0 auto;
         padding: 0 1.5rem;
       }
-      .news-card {
+      .card {
         background-color: #ffffff;
-        border-radius: 0.75rem;
+        border-radius: 0.5rem;
         overflow: hidden;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e5e7eb;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         display: flex;
         flex-direction: column;
-        border: 1px solid #f0e9dc;
       }
-      .news-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
       }
-      .news-card-image {
+      .card-image {
         width: 100%;
-        height: 200px;
+        height: 250px;
         object-fit: cover;
         transition: transform 0.4s ease;
       }
-      .news-card:hover .news-card-image {
+      .card:hover .card-image {
         transform: scale(1.03);
       }
-      .news-card-content {
-        padding: 1.25rem;
+      .card-content {
+        padding: 1.5rem;
         flex-grow: 1;
       }
-      .news-card-title {
-        font-size: 1.15rem;
+      .card-title {
+        font-size: 1.25rem;
         font-weight: 600;
-        color: #2c3e50;
+        color: #1f2937;
         line-height: 1.4;
         margin-bottom: 0.5rem;
       }
-      .news-card-description {
-        font-size: 0.875rem;
-        color: #7f8c8d;
+      .card-description {
+        font-size: 0.95rem;
+        color: #6b7280;
         line-height: 1.6;
         margin-bottom: 1rem;
         flex-grow: 1;
@@ -73,119 +72,13 @@
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.5px;
-        color: #bfa571;
+        color: #d8b449;
         text-decoration: none;
         transition: color 0.3s ease;
       }
       .read-more-link:hover {
-        color: #9c845b;
+        color: #b48e3e;
         text-decoration: underline;
-      }
-
-      /* Responsive timeline styles */
-      .timeline {
-        position: relative;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-      }
-
-      /* The timeline vertical line is only visible on large screens (md) */
-      .timeline::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 2px;
-        background-color: #bfa571;
-        z-index: 10;
-        display: none;
-      }
-
-      @media (min-width: 768px) {
-        .timeline {
-          background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d3c7b3' fill-opacity='0.2'%3E%3Cpath d='M25 0L50 25L25 50L0 25L25 0ZM75 0L100 25L75 50L50 25L75 0ZM25 50L50 75L25 100L0 75L25 50ZM75 50L100 75L75 100L50 75L75 50Z'/%3E%3C/g%3E%3C/svg%3E");
-          background-size: 100px 100px;
-        }
-        .timeline::before {
-          display: block;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      }
-
-      .timeline-item {
-        position: relative;
-        margin-bottom: 2.5rem; /* Reduced margin for mobile */
-      }
-
-      .timeline-item-left,
-      .timeline-item-right {
-        display: flex;
-        flex-direction: column;
-        padding: 0; /* Removed padding for mobile */
-      }
-
-      @media (min-width: 768px) {
-        .timeline-item-left {
-          justify-content: flex-end;
-          padding-right: 3rem;
-          padding-left: 0;
-          flex-direction: row;
-        }
-        .timeline-item-right {
-          justify-content: flex-start;
-          padding-left: 3rem;
-          padding-right: 0;
-          flex-direction: row;
-        }
-      }
-
-      /* The timeline indicator is only visible on large screens (md) */
-      .timeline-indicator {
-        display: none;
-      }
-
-      @media (min-width: 768px) {
-        .timeline-indicator {
-          display: block;
-          position: absolute;
-          top: 1rem;
-          width: 1rem;
-          height: 1rem;
-          background-color: #bfa571;
-          border-radius: 50%;
-          border: 2px solid #ffffff;
-          z-index: 20;
-          box-shadow: 0 0 0 2px rgba(191, 165, 113, 0.4);
-        }
-        .timeline-item-left .timeline-indicator {
-          right: -0.5rem;
-          left: unset;
-        }
-        .timeline-item-right .timeline-indicator {
-          left: -0.5rem;
-          right: unset;
-        }
-      }
-
-      .timeline-card-width {
-        width: 100%;
-      }
-
-      @media (min-width: 768px) {
-        .timeline-card-width {
-          width: calc(50% - 3rem);
-        }
-      }
-
-      .featured-card-image {
-        height: 300px;
-      }
-      .featured-card-title {
-        font-size: 1.5rem;
-      }
-      .featured-card-description {
-        font-size: 1rem;
       }
     </style>
   </head>
@@ -236,7 +129,7 @@
               class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-300 transition-all duration-300 group-hover:w-full"
             ></span>
           </a>
-          <a class="hover:text-yellow-300 relative group" href="#news & events"
+          <a class="hover:text-yellow-300 relative group" href="News.html"
             >News & Events
             <span
               class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-300 transition-all duration-300 group-hover:w-full"
@@ -386,147 +279,126 @@
     </nav>
 
     <main class="container py-16">
-      <div class="text-center mb-12 mt-20">
+      <div class="text-center mb-12 mt-12">
         <h1 class="text-4xl md:text-5xl font-extrabold mt-2 text-gray-900">
-          Our Timeline of Events
+          News & Events
         </h1>
       </div>
 
-      <div class="timeline flex flex-col items-center">
-        <div class="timeline-item timeline-item-left w-full">
-          <div class="timeline-indicator"></div>
-          <div class="news-card timeline-card-width max-w-xl">
-            <div class="relative overflow-hidden">
-              <img
-                src="https://shivanjalijewellers.com/static/media/blog-1.ba03ed45aa7a7163a339.jpeg"
-                alt="Featured News Image 1"
-                class="news-card-image featured-card-image"
-              />
-            </div>
-            <div class="news-card-content">
-              <h2 class="news-card-title featured-card-title">
-                जीवन आणि सौंदर्य करणारे मुहूर्त महोत्सव
-              </h2>
-              <p class="news-card-description featured-card-description">
-                शिवांजली ज्वेलर्सने आपल्या ग्राहकांसाठी घेऊन येत आहे एका खास
-                सुवर्ण संधी ... मुहूर्त महोत्सव... हा महोत्सव सौंदर्य आणि
-                समृद्धीचे प्रतीक आहे.
-              </p>
-              <a href="#" class="read-more-link">Read more</a>
-            </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="card">
+          <div class="relative overflow-hidden">
+            <img
+              src="https://shivanjalijewellers.com/static/media/blog-1.ba03ed45aa7a7163a339.jpeg"
+              alt="News Image 1"
+              class="card-image"
+            />
+          </div>
+          <div class="card-content">
+            <h2 class="card-title">जीवन आणि सौंदर्य करणारे मुहूर्त महोत्सव</h2>
+            <p class="card-description">
+              शिवांजली ज्वेलर्सने आपल्या ग्राहकांसाठी घेऊन येत आहे एका खास
+              सुवर्ण संधी ... मुहूर्त महोत्सव...
+            </p>
+            <a href="#" class="read-more-link"> Read more </a>
           </div>
         </div>
 
-        <div class="timeline-item timeline-item-right w-full">
-          <div class="timeline-indicator"></div>
-          <div class="news-card timeline-card-width max-w-xl">
-            <div class="relative overflow-hidden">
-              <img
-                src="https://shivanjalijewellers.com/static/media/news1.86cac5ee195df46c68ca.jpeg"
-                alt="News Image 2"
-                class="news-card-image"
-              />
-            </div>
-            <div class="news-card-content">
-              <h2 class="news-card-title">
-                शिवांजली ज्वेलर्सच्या मुहूर्त महोत्सवाला उत्स्फूर्त प्रतिसाद:
-              </h2>
-              <p class="news-card-description">
-                • कराड: शिवांजली ज्वेलर्स, कराड येथे २ मार्च ते ३१ मे २०२५
-                दरम्यान आयोजित करण्यात आलेल्या "मुहूर्त महोत्सव"...
-              </p>
-              <a href="#" class="read-more-link">Read more</a>
-            </div>
+        <div class="card">
+          <div class="relative overflow-hidden">
+            <img
+              src="https://shivanjalijewellers.com/static/media/news1.86cac5ee195df46c68ca.jpeg"
+              alt="News Image 2"
+              class="card-image"
+            />
+          </div>
+          <div class="card-content">
+            <h2 class="card-title">
+              शिवांजली ज्वेलर्सच्या मुहूर्त महोत्सवाला उत्स्फूर्त प्रतिसाद:
+            </h2>
+            <p class="card-description">
+              • कराड: शिवांजली ज्वेलर्स, कराड येथे २ मार्च ते ३१ मे २०२५ दरम्यान
+              आयोजित करण्यात आलेल्या "मुहूर्त महोत्सव"...
+            </p>
+            <a href="#" class="read-more-link"> Read more </a>
           </div>
         </div>
 
-        <div class="timeline-item timeline-item-left w-full">
-          <div class="timeline-indicator"></div>
-          <div class="news-card timeline-card-width max-w-xl">
-            <div class="relative overflow-hidden">
-              <img
-                src="https://shivanjalijewellers.com/static/media/news2.2d23116c2876e1ad2543.jpeg"
-                alt="News Image 3"
-                class="news-card-image"
-              />
-            </div>
-            <div class="news-card-content">
-              <h2 class="news-card-title">
-                शिवांजली ज्वेलर्सच्या मुहूर्त महोत्सवास प्रचंड प्रतिसाद
-              </h2>
-              <p class="news-card-description">
-                कराड - पुरोहित दुमाला कराड येथे गेल्या २१ वर्षापासून अग्रगण्य
-                सुवर्णपेढी शिवांजली ज्वेलर्स येथे “मुहूर्त महोत्सव” चे आयोजन
-                करण्यात आले होते...
-              </p>
-              <a href="#" class="read-more-link">Read more</a>
-            </div>
+        <div class="card">
+          <div class="relative overflow-hidden">
+            <img
+              src="https://shivanjalijewellers.com/static/media/news2.2d23116c2876e1ad2543.jpeg"
+              alt="News Image 3"
+              class="card-image"
+            />
+          </div>
+          <div class="card-content">
+            <h2 class="card-title">
+              शिवांजली ज्वेलर्सच्या मुहूर्त महोत्सवास प्रचंड प्रतिसाद
+            </h2>
+            <p class="card-description">
+              कराड - पुरोहित दुमाला कराड येथे गेल्या २१ वर्षापासून अग्रगण्य
+              सुवर्णपेढी शिवांजली ज्वेलर्स येथे “मुहूर्त महोत्सव” चे आयोजन
+              करण्यात आले होते...
+            </p>
+            <a href="#" class="read-more-link"> Read more </a>
           </div>
         </div>
 
-        <div class="timeline-item timeline-item-right w-full">
-          <div class="timeline-indicator"></div>
-          <div class="news-card timeline-card-width max-w-xl">
-            <div class="relative overflow-hidden">
-              <img
-                src="https://shivanjalijewellers.com/static/media/news3.210f2c43c39a0a1d0ead.jpeg"
-                alt="News Image 4"
-                class="news-card-image"
-              />
-            </div>
-            <div class="news-card-content">
-              <h2 class="news-card-title">
-                कराड: शिवांजली ज्वेलर्सच्या मुहूर्त महोत्सवाचे उद्घाटन
-              </h2>
-              <p class="news-card-description">
-                शिवांजली ज्वेलर्सचा मुहूर्त महोत्सव महिलांचा सोहळास: हजारो
-                ग्राहकांना शिवांजली ज्वेलर्सची २१ वर्षांपासून सुवर्ण विश्वासू
-                ओळख आहे...
-              </p>
-              <a href="#" class="read-more-link">Read more</a>
-            </div>
+        <div class="card">
+          <div class="relative overflow-hidden">
+            <img
+              src="https://shivanjalijewellers.com/static/media/news3.210f2c43c39a0a1d0ead.jpeg"
+              alt="News Image 4"
+              class="card-image"
+            />
+          </div>
+          <div class="card-content">
+            <h2 class="card-title">
+              कराड: शिवांजली ज्वेलर्सच्या मुहूर्त महोत्सवाचे उद्घाटन
+            </h2>
+            <p class="card-description">
+              शिवांजली ज्वेलर्सचा मुहूर्त महोत्सव महिलांचा सोहळास: हजारो
+              ग्राहकांना शिवांजली ज्वेलर्सची २१ वर्षांपासून सुवर्ण विश्वासू ओळख
+              आहे...
+            </p>
+            <a href="#" class="read-more-link"> Read more </a>
           </div>
         </div>
 
-        <div class="timeline-item timeline-item-left w-full">
-          <div class="timeline-indicator"></div>
-          <div class="news-card timeline-card-width max-w-xl">
-            <div class="relative overflow-hidden">
-              <img
-                src="https://shivanjalijewellers.com/static/media/news4.3343e64e22c4b2fa0814.jpeg"
-                alt="News Image 5"
-                class="news-card-image"
-              />
-            </div>
-            <div class="news-card-content">
-              <h2 class="news-card-title">
-                अभिषेक चित्रगुप्तांना जयश्री महाले यांचा सत्कार
-              </h2>
-              <p class="news-card-description">
-                शिवांजली ज्वेलर्स येथे आयोजित सोहळा...
-              </p>
-              <a href="#" class="read-more-link">Read more</a>
-            </div>
+        <div class="card">
+          <div class="relative overflow-hidden">
+            <img
+              src="https://shivanjalijewellers.com/static/media/news4.3343e64e22c4b2fa0814.jpeg"
+              alt="News Image 5"
+              class="card-image"
+            />
+          </div>
+          <div class="card-content">
+            <h2 class="card-title">
+              अभिषेक चित्रगुप्तांना जयश्री महाले यांचा सत्कार
+            </h2>
+            <p class="card-description">
+              शिवांजली ज्वेलर्स येथे आयोजित सोहळा...
+            </p>
+            <a href="#" class="read-more-link"> Read more </a>
           </div>
         </div>
 
-        <div class="timeline-item timeline-item-right w-full">
-          <div class="timeline-indicator"></div>
-          <div class="news-card timeline-card-width max-w-xl">
-            <div class="relative overflow-hidden">
-              <img
-                src="https://shivanjalijewellers.com/static/media/news6.c00d1699851af40dbf91.jpeg"
-                alt="News Image 6"
-                class="news-card-image"
-              />
-            </div>
-            <div class="news-card-content">
-              <h2 class="news-card-title">दत्तात्रय महाले यांचा सत्कार</h2>
-              <p class="news-card-description">
-                दत्तू सरसवा यांचा सत्कार शिबांजली ज्वेलर्सकडून.
-              </p>
-              <a href="#" class="read-more-link">Read more</a>
-            </div>
+        <div class="card">
+          <div class="relative overflow-hidden">
+            <img
+              src="https://shivanjalijewellers.com/static/media/news6.c00d1699851af40dbf91.jpeg"
+              alt="News Image 6"
+              class="card-image"
+            />
+          </div>
+          <div class="card-content">
+            <h2 class="card-title">दत्तात्रय महाले यांचा सत्कार</h2>
+            <p class="card-description">
+              दत्तू सरसवा यांचा सत्कार शिबांजली ज्वेलर्सकडून.
+            </p>
+            <a href="#" class="read-more-link"> Read more </a>
           </div>
         </div>
       </div>
@@ -668,28 +540,6 @@
       </div>
     </footer>
 
-    <script>
-      // Mobile menu toggle
-      const mobileBtn = document.getElementById("mobileBtn");
-      const mobileMenu = document.getElementById("mobileMenu");
-      const overlay = document.getElementById("overlay");
-
-      mobileBtn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("-translate-x-full");
-        overlay.classList.toggle("hidden");
-        setTimeout(() => overlay.classList.toggle("opacity-0"), 10);
-
-        // Prevent background scroll
-        document.body.classList.toggle("overflow-hidden");
-      });
-
-      overlay.addEventListener("click", () => {
-        mobileMenu.classList.add("-translate-x-full");
-        overlay.classList.add("opacity-0");
-        setTimeout(() => overlay.classList.add("hidden"), 300);
-
-        document.body.classList.remove("overflow-hidden");
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
