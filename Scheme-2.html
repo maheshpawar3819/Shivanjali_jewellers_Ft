@@ -20,195 +20,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="style.css">
 
-    <style>
-      :root {
-        --accent-gold: #d4af37;
-        --deep-gold: #b8860b;
-        --luxury-black: #1a1a1a;
-        --soft-cream: #fdf7f0;
-      }
 
-      .font-luxury {
-        font-family: "Playfair Display", serif;
-      }
-      .font-modern {
-        font-family: "Inter", sans-serif;
-      }
-
-      body {
-        font-family: "Inter", sans-serif;
-        background: linear-gradient(
-          135deg,
-          #fdf7f0 0%,
-          #f8f4e6 50%,
-          #fdf7f0 100%
-        );
-      }
-
-      /* Enhanced glassmorphism */
-      .glass {
-        background: rgba(255, 255, 255, 0.25);
-        backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-      }
-
-      .glass-dark {
-        background: rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(15px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .gold-gradient {
-        background: linear-gradient(
-          135deg,
-          #d4af37 0%,
-          #ffd700 25%,
-          #b8860b 50%,
-          #daa520 75%,
-          #d4af37 100%
-        );
-      }
-
-      .luxury-gradient {
-        background: linear-gradient(
-          135deg,
-          #1a1a1a 0%,
-          #2d2d2d 25%,
-          #1a1a1a 50%,
-          #0f0f0f 75%,
-          #000 100%
-        );
-      }
-
-      /* Button styles */
-      .btn-luxury {
-        background: linear-gradient(135deg, #d4af37, #ffd700);
-        box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
-        transition: all 0.3s ease;
-      }
-
-      .btn-luxury:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4);
-        background: linear-gradient(135deg, #ffd700, #d4af37);
-      }
-
-      /* Language toggle */
-      .lang-toggle {
-        transition: all 0.3s ease;
-      }
-
-      .lang-toggle.active {
-        background: #d4af37;
-        color: white;
-      }
-
-      /* Animations */
-      .fade-in {
-        animation: fadeIn 0.8s ease-out forwards;
-        opacity: 0;
-        transform: translateY(30px);
-      }
-
-      @keyframes fadeIn {
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .coin-animation {
-        animation: coinFloat 4s ease-in-out infinite;
-      }
-
-      @keyframes coinFloat {
-        0%,
-        100% {
-          transform: translateY(0px) rotate(0deg);
-        }
-        25% {
-          transform: translateY(-10px) rotate(5deg);
-        }
-        50% {
-          transform: translateY(-15px) rotate(0deg);
-        }
-        75% {
-          transform: translateY(-5px) rotate(-5deg);
-        }
-      }
-
-      /* Custom scrollbar */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-
-      ::-webkit-scrollbar-track {
-        background: #f1f1f1;
-      }
-
-      ::-webkit-scrollbar-thumb {
-        background: linear-gradient(135deg, #d4af37, #b8860b);
-        border-radius: 4px;
-      }
-
-      /* Text effects */
-      .text-glow {
-        text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
-      }
-
-      .scheme-card {
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-
-      .scheme-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 25px 50px rgba(212, 175, 55, 0.2);
-      }
-
-      /* Custom animations */
-      @keyframes slideIn {
-        from {
-          transform: translateX(-100%);
-        }
-        to {
-          transform: translateX(0);
-        }
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      .menu-open {
-        animation: slideIn 0.3s ease-out forwards;
-      }
-
-      .overlay-open {
-        animation: fadeIn 0.3s ease-out forwards;
-      }
-
-      /* Glassmorphism effect */
-      .glass-effect {
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-      }
-
-      /* Custom gradient */
-      .gold-gradient {
-        background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706);
-      }
-
-      /* Hover glow effect */
-      .hover-glow:hover {
-        box-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
-      }
-    </style>
   </head>
 
   <body class="text-gray-900">
@@ -407,324 +221,328 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="pt-24 pb-12 gold-gradient relative overflow-hidden">
-      <div class="absolute inset-0">
-        <div
-          class="absolute top-20 left-20 w-32 h-32 bg-white/10 rounded-full blur-3xl animate-pulse"
-        ></div>
-        <div
-          class="absolute bottom-10 right-16 w-24 h-24 bg-white/10 rounded-full blur-2xl animate-pulse"
-        ></div>
-      </div>
 
-      <div class="relative max-w-7xl mx-auto px-6 text-center">
-        <h1
-          class="text-5xl md:text-7xl font-luxury font-bold text-white text-glow mb-4"
-        >
-          Suvarna Bhishi Yojana
-        </h1>
-        <div class="w-24 h-1 bg-white/50 mx-auto mb-8 rounded-full"></div>
-        <p
-          class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed"
-        >
-          स्वर्ण भिशी योजना - Secure your golden future with systematic savings
-        </p>
-      </div>
+    <main class="pt-20">
 
-      <!-- Floating gold coin -->
-      <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
-        <div
-          class="coin-animation w-16 h-16 gold-gradient rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-2xl"
-        >
-          ₹
+      <!-- Hero Section -->
+      <section class="pt-24 pb-12 gold-gradient relative overflow-hidden">
+        <div class="absolute inset-0">
+          <div
+            class="absolute top-20 left-20 w-32 h-32 bg-white/10 rounded-full blur-3xl animate-pulse"
+          ></div>
+          <div
+            class="absolute bottom-10 right-16 w-24 h-24 bg-white/10 rounded-full blur-2xl animate-pulse"
+          ></div>
         </div>
-      </div>
-    </section>
-
-    <!-- Language Toggle -->
-    <section class="py-6 bg-white/80 backdrop-blur-sm">
-      <div class="max-w-7xl mx-auto px-6 flex justify-center">
-        <div class="flex bg-gray-100 rounded-full p-1">
-          <button
-            id="englishBtn"
-            class="lang-toggle active px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300"
+  
+        <div class="relative max-w-7xl mx-auto px-6 text-center">
+          <h1
+            class="text-5xl md:text-7xl font-luxury font-bold text-white text-glow mb-4"
           >
-            English
-          </button>
-          <button
-            id="marathiBtn"
-            class="lang-toggle px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300"
+            Suvarna Bhishi Yojana
+          </h1>
+          <div class="w-24 h-1 bg-white/50 mx-auto mb-8 rounded-full"></div>
+          <p
+            class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed"
           >
-            मराठी
-          </button>
+            स्वर्ण भिशी योजना - Secure your golden future with systematic savings
+          </p>
         </div>
-      </div>
-    </section>
-
-    <!-- Main Content -->
-    <section class="py-16">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
-          <!-- Content Area -->
-          <div class="lg:col-span-2">
-            <div id="englishContent" class="content-section">
-              <div class="bg-white rounded-3xl shadow-xl p-8 mb-8 fade-in">
-                <div class="flex items-center gap-4 mb-6">
-                  <div
-                    class="w-12 h-12 gold-gradient rounded-full flex items-center justify-center"
-                  >
-                    <i class="fas fa-info-circle text-white text-xl"></i>
-                  </div>
-                  <h2 class="text-2xl font-luxury font-bold text-gray-800">
-                    About the Scheme
-                  </h2>
-                </div>
-
-                <p class="text-gray-700 leading-relaxed mb-6">
-                  According to Indian culture, gold ornamentation is an
-                  important element to reveal the beauty of communication.
-                  Ornaments are traditionally an integral part of a womans life.
-                  The tradition of handing over these ornaments on a large scale
-                  from an ad continues to this day. Weddings and other annual
-                  events make buying jewelery a necessity. Deciding to regulate
-                  all such members rather than buying jewelery in one go.
-                  Remember this we are expressing our feelings Shivanjali
-                  Suvarna Bhishi Yojana.
-                </p>
-
-                <p class="text-gray-700 leading-relaxed mb-6">
-                  You can buy more than our savings amount by depositing a
-                  certain amount into the plan every month. Because at the end
-                  of the scheme we also participate in the scheme willingly. By
-                  giving you special discounts on purchases equal to your
-                  monthly savings amount.
-                </p>
-
-                <p class="text-gray-700 leading-relaxed mb-6">
-                  With Shivanjali Jewellers belief and continued growth and
-                  series of designs in the field of jewellery, participating in
-                  this scheme will make your jewelery experience enjoyable and
-                  rewarding.
-                </p>
-              </div>
-            </div>
-
-            <div id="marathiContent" class="content-section hidden">
-              <div class="bg-white rounded-3xl shadow-xl p-8 mb-8 fade-in">
-                <div class="flex items-center gap-4 mb-6">
-                  <div
-                    class="w-12 h-12 gold-gradient rounded-full flex items-center justify-center"
-                  >
-                    <i class="fas fa-info-circle text-white text-xl"></i>
-                  </div>
-                  <h2 class="text-2xl font-luxury font-bold text-gray-800">
-                    योजनेविषयी
-                  </h2>
-                </div>
-
-                <p class="text-gray-700 leading-relaxed mb-6">
-                  भारतीय संस्कृतीनुसार, संवादाचे सौंदर्य प्रकट करण्यासाठी
-                  सोन्याचे दागिने हा एक महत्त्वाचा घटक आहे. दागिने हे
-                  पारंपारिकपणे महिलांच्या जीवनाचा अविभाज्य भाग आहेत. जाहिरातीतून
-                  मोठ्या प्रमाणात हे दागिने देण्याची परंपरा आजही चालू आहे. लग्न
-                  आणि इतर वार्षिक कार्यक्रमांमध्ये दागिने खरेदी करणे आवश्यक
-                  बनते. एकाच वेळी दागिने खरेदी करण्यापेक्षा अशा सर्व सदस्यांचे
-                  नियमन करण्याचा निर्णय घेणे. हे लक्षात ठेवा आम्ही आमच्या भावना
-                  शिवांजली सुवर्णाभिषेकी योजना व्यक्त करत आहोत.
-                </p>
-
-                <p class="text-gray-700 leading-relaxed mb-6">
-                  दरमहा योजनेत एक निश्चित रक्कम जमा करून तुम्ही आमच्या बचत
-                  रकमेपेक्षा जास्त खरेदी करू शकता. कारण योजनेच्या शेवटी आम्ही
-                  स्वेच्छेने योजनेत सहभागी होतो. तुमच्या मासिक बचत रकमेच्या
-                  बरोबरीने खरेदीवर तुम्हाला विशेष सवलत देऊन.
-                </p>
-                <p class="text-gray-700 leading-relaxed mb-6">
-                  शिवांजली ज्वेलर्सचा विश्वास आणि दागिन्यांच्या क्षेत्रातील सतत
-                  वाढ आणि डिझाइनच्या मालिकेसह, या योजनेत सहभागी झाल्याने तुमचा
-                  दागिन्यांचा अनुभव आनंददायी आणि फायदेशीर होईल.
-                </p>
-              </div>
-            </div>
-            <div class="overflow-x-auto mt-8">
-              <table
-                class="w-full border border-yellow-600 rounded-lg overflow-hidden shadow-lg"
-              >
-                <thead class="bg-yellow-600 text-white text-lg">
-                  <tr>
-                    <th class="py-3 px-4 text-left">Details</th>
-                    <th class="py-3 px-4 text-left">Scheme Type 1 (11+1)</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-yellow-200 bg-white">
-                  <tr class="hover:bg-yellow-50">
-                    <td class="py-3 px-4 text-gray-700 font-medium">
-                      Your monthly contribution
-                    </td>
-                    <td class="py-3 px-4 text-gray-900">Rs. 3,000/-</td>
-                  </tr>
-                  <tr class="hover:bg-yellow-50">
-                    <td class="py-3 px-4 text-gray-700 font-medium">
-                      Total monthly installments
-                    </td>
-                    <td class="py-3 px-4 text-gray-900">11 months</td>
-                  </tr>
-                  <tr class="hover:bg-yellow-50">
-                    <td class="py-3 px-4 text-gray-700 font-medium">
-                      Your total contribution
-                    </td>
-                    <td class="py-3 px-4 text-gray-900">Rs. 33,000/-</td>
-                  </tr>
-                  <tr class="hover:bg-yellow-50">
-                    <td class="py-3 px-4 text-gray-700 font-medium">
-                      Discounts on purchases from us
-                    </td>
-                    <td class="py-3 px-4 text-gray-900">
-                      Rs. 3,000/- discount on Gold & Silver Jewellery only
-                    </td>
-                  </tr>
-                  <tr class="hover:bg-yellow-50">
-                    <td class="py-3 px-4 text-gray-700 font-medium">
-                      The value of your purchase
-                    </td>
-                    <td class="py-3 px-4 text-gray-900">Rs. 36,000/-</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <!-- Sidebar with Gold Coins Image and CTA -->
-          <div class="lg:col-span-1">
-            <div class="sticky top-32">
-              <!-- Gold Coins Visual -->
-              <div
-                class="bg-white rounded-3xl shadow-xl p-8 text-center mb-8 fade-in"
-              >
-                <div class="relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1610375461246-83df859d849d?w=400"
-                    alt="Gold Coins Investment"
-                    class="w-full h-64 object-cover rounded-2xl mb-6"
-                  />
-                  <div
-                    class="absolute inset-0 bg-gradient-to-t from-yellow-600/20 to-transparent rounded-2xl"
-                  ></div>
-                  <div
-                    class="absolute bottom-4 left-4 right-4 glass-dark rounded-lg p-3"
-                  >
-                    <div class="text-white font-bold">
-                      Start Your Golden Journey
-                    </div>
-                    <div class="text-yellow-300 text-sm">
-                      Invest as low as ₹1,000/month
-                    </div>
-                  </div>
-                </div>
-
-                <h3 class="text-xl font-luxury font-bold text-gray-800 mb-4">
-                  Ready to Start Saving?
-                </h3>
-                <p class="text-gray-600 mb-6">
-                  Join thousands of satisfied customers who have secured their
-                  golden future with us.
-                </p>
-
-                <button
-                  class="btn-luxury px-8 py-4 rounded-full text-black font-bold w-full text-lg mb-4"
-                >
-                  <i class="fas fa-rocket mr-2"></i>Start Your Scheme Today
-                </button>
-              </div>
-
-              <!-- Quick Benefits -->
-              <div class="bg-white rounded-3xl shadow-xl p-8 fade-in">
-                <h3
-                  class="text-xl font-luxury font-bold text-gray-800 mb-6 text-center"
-                >
-                  Why Choose Our Scheme?
-                </h3>
-
-                <div class="space-y-4">
-                  <div
-                    class="flex items-center gap-4 p-4 bg-yellow-50 rounded-xl"
-                  >
-                    <div
-                      class="w-10 h-10 bg-yellow-600 rounded-full flex items-center justify-center"
-                    >
-                      <i class="fas fa-percentage text-white"></i>
-                    </div>
-                    <div>
-                      <div class="font-semibold text-gray-800">
-                        12th Month Bonus
-                      </div>
-                      <div class="text-sm text-gray-600">
-                        Extra value on completion
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    class="flex items-center gap-4 p-4 bg-blue-50 rounded-xl"
-                  >
-                    <div
-                      class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center"
-                    >
-                      <i class="fas fa-coins text-white"></i>
-                    </div>
-                    <div>
-                      <div class="font-semibold text-gray-800">
-                        Flexible Payments
-                      </div>
-                      <div class="text-sm text-gray-600">
-                        Pay as per convenience
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    class="flex items-center gap-4 p-4 bg-green-50 rounded-xl"
-                  >
-                    <div
-                      class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center"
-                    >
-                      <i class="fas fa-certificate text-white"></i>
-                    </div>
-                    <div>
-                      <div class="font-semibold text-gray-800">
-                        22K Gold Jewelry
-                      </div>
-                      <div class="text-sm text-gray-600">
-                        BIS Hallmarked quality
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    class="flex items-center gap-4 p-4 bg-purple-50 rounded-xl"
-                  >
-                    <div
-                      class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center"
-                    >
-                      <i class="fas fa-handshake text-white"></i>
-                    </div>
-                    <div>
-                      <div class="font-semibold text-gray-800">
-                        Trusted Legacy
-                      </div>
-                      <div class="text-sm text-gray-600">
-                        35+ years of excellence
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+  
+        <!-- Floating gold coin -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+          <div
+            class="coin-animation w-16 h-16 gold-gradient rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-2xl"
+          >
+            ₹
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+  
+      <!-- Language Toggle -->
+      <section class="py-6 bg-white/80 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-6 flex justify-center">
+          <div class="flex bg-gray-100 rounded-full p-1">
+            <button
+              id="englishBtn"
+              class="lang-toggle active px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300"
+            >
+              English
+            </button>
+            <button
+              id="marathiBtn"
+              class="lang-toggle px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300"
+            >
+              मराठी
+            </button>
+          </div>
+        </div>
+      </section>
+  
+      <!-- Main Content -->
+      <section class="py-16">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+            <!-- Content Area -->
+            <div class="lg:col-span-2">
+              <div id="englishContent" class="content-section">
+                <div class="bg-white rounded-3xl shadow-xl p-8 mb-8 fade-in">
+                  <div class="flex items-center gap-4 mb-6">
+                    <div
+                      class="w-12 h-12 gold-gradient rounded-full flex items-center justify-center"
+                    >
+                      <i class="fas fa-info-circle text-white text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-luxury font-bold text-gray-800">
+                      About the Scheme
+                    </h2>
+                  </div>
+  
+                  <p class="text-gray-700 leading-relaxed mb-6">
+                    According to Indian culture, gold ornamentation is an
+                    important element to reveal the beauty of communication.
+                    Ornaments are traditionally an integral part of a womans life.
+                    The tradition of handing over these ornaments on a large scale
+                    from an ad continues to this day. Weddings and other annual
+                    events make buying jewelery a necessity. Deciding to regulate
+                    all such members rather than buying jewelery in one go.
+                    Remember this we are expressing our feelings Shivanjali
+                    Suvarna Bhishi Yojana.
+                  </p>
+  
+                  <p class="text-gray-700 leading-relaxed mb-6">
+                    You can buy more than our savings amount by depositing a
+                    certain amount into the plan every month. Because at the end
+                    of the scheme we also participate in the scheme willingly. By
+                    giving you special discounts on purchases equal to your
+                    monthly savings amount.
+                  </p>
+  
+                  <p class="text-gray-700 leading-relaxed mb-6">
+                    With Shivanjali Jewellers belief and continued growth and
+                    series of designs in the field of jewellery, participating in
+                    this scheme will make your jewelery experience enjoyable and
+                    rewarding.
+                  </p>
+                </div>
+              </div>
+  
+              <div id="marathiContent" class="content-section hidden">
+                <div class="bg-white rounded-3xl shadow-xl p-8 mb-8 fade-in">
+                  <div class="flex items-center gap-4 mb-6">
+                    <div
+                      class="w-12 h-12 gold-gradient rounded-full flex items-center justify-center"
+                    >
+                      <i class="fas fa-info-circle text-white text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-luxury font-bold text-gray-800">
+                      योजनेविषयी
+                    </h2>
+                  </div>
+  
+                  <p class="text-gray-700 leading-relaxed mb-6">
+                    भारतीय संस्कृतीनुसार, संवादाचे सौंदर्य प्रकट करण्यासाठी
+                    सोन्याचे दागिने हा एक महत्त्वाचा घटक आहे. दागिने हे
+                    पारंपारिकपणे महिलांच्या जीवनाचा अविभाज्य भाग आहेत. जाहिरातीतून
+                    मोठ्या प्रमाणात हे दागिने देण्याची परंपरा आजही चालू आहे. लग्न
+                    आणि इतर वार्षिक कार्यक्रमांमध्ये दागिने खरेदी करणे आवश्यक
+                    बनते. एकाच वेळी दागिने खरेदी करण्यापेक्षा अशा सर्व सदस्यांचे
+                    नियमन करण्याचा निर्णय घेणे. हे लक्षात ठेवा आम्ही आमच्या भावना
+                    शिवांजली सुवर्णाभिषेकी योजना व्यक्त करत आहोत.
+                  </p>
+  
+                  <p class="text-gray-700 leading-relaxed mb-6">
+                    दरमहा योजनेत एक निश्चित रक्कम जमा करून तुम्ही आमच्या बचत
+                    रकमेपेक्षा जास्त खरेदी करू शकता. कारण योजनेच्या शेवटी आम्ही
+                    स्वेच्छेने योजनेत सहभागी होतो. तुमच्या मासिक बचत रकमेच्या
+                    बरोबरीने खरेदीवर तुम्हाला विशेष सवलत देऊन.
+                  </p>
+                  <p class="text-gray-700 leading-relaxed mb-6">
+                    शिवांजली ज्वेलर्सचा विश्वास आणि दागिन्यांच्या क्षेत्रातील सतत
+                    वाढ आणि डिझाइनच्या मालिकेसह, या योजनेत सहभागी झाल्याने तुमचा
+                    दागिन्यांचा अनुभव आनंददायी आणि फायदेशीर होईल.
+                  </p>
+                </div>
+              </div>
+              <div class="overflow-x-auto mt-8">
+                <table
+                  class="w-full border border-yellow-600 rounded-lg overflow-hidden shadow-lg"
+                >
+                  <thead class="bg-yellow-600 text-white text-lg">
+                    <tr>
+                      <th class="py-3 px-4 text-left">Details</th>
+                      <th class="py-3 px-4 text-left">Scheme Type 1 (11+1)</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-yellow-200 bg-white">
+                    <tr class="hover:bg-yellow-50">
+                      <td class="py-3 px-4 text-gray-700 font-medium">
+                        Your monthly contribution
+                      </td>
+                      <td class="py-3 px-4 text-gray-900">Rs. 3,000/-</td>
+                    </tr>
+                    <tr class="hover:bg-yellow-50">
+                      <td class="py-3 px-4 text-gray-700 font-medium">
+                        Total monthly installments
+                      </td>
+                      <td class="py-3 px-4 text-gray-900">11 months</td>
+                    </tr>
+                    <tr class="hover:bg-yellow-50">
+                      <td class="py-3 px-4 text-gray-700 font-medium">
+                        Your total contribution
+                      </td>
+                      <td class="py-3 px-4 text-gray-900">Rs. 33,000/-</td>
+                    </tr>
+                    <tr class="hover:bg-yellow-50">
+                      <td class="py-3 px-4 text-gray-700 font-medium">
+                        Discounts on purchases from us
+                      </td>
+                      <td class="py-3 px-4 text-gray-900">
+                        Rs. 3,000/- discount on Gold & Silver Jewellery only
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-yellow-50">
+                      <td class="py-3 px-4 text-gray-700 font-medium">
+                        The value of your purchase
+                      </td>
+                      <td class="py-3 px-4 text-gray-900">Rs. 36,000/-</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+  
+            <!-- Sidebar with Gold Coins Image and CTA -->
+            <div class="lg:col-span-1">
+              <div class="sticky top-32">
+                <!-- Gold Coins Visual -->
+                <div
+                  class="bg-white rounded-3xl shadow-xl p-8 text-center mb-8 fade-in"
+                >
+                  <div class="relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1610375461246-83df859d849d?w=400"
+                      alt="Gold Coins Investment"
+                      class="w-full h-64 object-cover rounded-2xl mb-6"
+                    />
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-yellow-600/20 to-transparent rounded-2xl"
+                    ></div>
+                    <div
+                      class="absolute bottom-4 left-4 right-4 glass-dark rounded-lg p-3"
+                    >
+                      <div class="text-white font-bold">
+                        Start Your Golden Journey
+                      </div>
+                      <div class="text-yellow-300 text-sm">
+                        Invest as low as ₹1,000/month
+                      </div>
+                    </div>
+                  </div>
+  
+                  <h3 class="text-xl font-luxury font-bold text-gray-800 mb-4">
+                    Ready to Start Saving?
+                  </h3>
+                  <p class="text-gray-600 mb-6">
+                    Join thousands of satisfied customers who have secured their
+                    golden future with us.
+                  </p>
+  
+                  <button
+                    class="btn-luxury px-8 py-4 rounded-full text-black font-bold w-full text-lg mb-4"
+                  >
+                    <i class="fas fa-rocket mr-2"></i>Start Your Scheme Today
+                  </button>
+                </div>
+  
+                <!-- Quick Benefits -->
+                <div class="bg-white rounded-3xl shadow-xl p-8 fade-in">
+                  <h3
+                    class="text-xl font-luxury font-bold text-gray-800 mb-6 text-center"
+                  >
+                    Why Choose Our Scheme?
+                  </h3>
+  
+                  <div class="space-y-4">
+                    <div
+                      class="flex items-center gap-4 p-4 bg-yellow-50 rounded-xl"
+                    >
+                      <div
+                        class="w-10 h-10 bg-yellow-600 rounded-full flex items-center justify-center"
+                      >
+                        <i class="fas fa-percentage text-white"></i>
+                      </div>
+                      <div>
+                        <div class="font-semibold text-gray-800">
+                          12th Month Bonus
+                        </div>
+                        <div class="text-sm text-gray-600">
+                          Extra value on completion
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div
+                      class="flex items-center gap-4 p-4 bg-blue-50 rounded-xl"
+                    >
+                      <div
+                        class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center"
+                      >
+                        <i class="fas fa-coins text-white"></i>
+                      </div>
+                      <div>
+                        <div class="font-semibold text-gray-800">
+                          Flexible Payments
+                        </div>
+                        <div class="text-sm text-gray-600">
+                          Pay as per convenience
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div
+                      class="flex items-center gap-4 p-4 bg-green-50 rounded-xl"
+                    >
+                      <div
+                        class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center"
+                      >
+                        <i class="fas fa-certificate text-white"></i>
+                      </div>
+                      <div>
+                        <div class="font-semibold text-gray-800">
+                          22K Gold Jewelry
+                        </div>
+                        <div class="text-sm text-gray-600">
+                          BIS Hallmarked quality
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div
+                      class="flex items-center gap-4 p-4 bg-purple-50 rounded-xl"
+                    >
+                      <div
+                        class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center"
+                      >
+                        <i class="fas fa-handshake text-white"></i>
+                      </div>
+                      <div>
+                        <div class="font-semibold text-gray-800">
+                          Trusted Legacy
+                        </div>
+                        <div class="text-sm text-gray-600">
+                          35+ years of excellence
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
      <!-- Enhanced Footer -->
     <footer
